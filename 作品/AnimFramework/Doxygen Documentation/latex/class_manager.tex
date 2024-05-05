@@ -1,0 +1,142 @@
+\doxysection{Manager Class Reference}
+\hypertarget{class_manager}{}\label{class_manager}\index{Manager@{Manager}}
+
+
+\doxylink{class_manager}{Manager} class.  
+
+
+
+
+{\ttfamily \#include $<$Manager.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_manager_ac2a9743e95173aa493749270d2703d0d}{Init}} (uint32\+\_\+t width, uint32\+\_\+t height, HWND h\+Wnd)
+\begin{DoxyCompactList}\small\item\em Init function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_manager_af1f0b50eadf21a78f4234ab78fe1f044}{Update}} (uint64\+\_\+t delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_manager_af8c57a8c8572684ca6999f30d5d00685}{Draw}} (uint64\+\_\+t delta\+Time)
+\begin{DoxyCompactList}\small\item\em Draw function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_manager_a970ac333358a47086c4a019ff254899b}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em Uninit function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{class_manager_a20d56cefa4ca57aa690b64e9e564fad9}{Set\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Initialize \doxylink{class_scene}{Scene}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene}{Scene}} $>$ \mbox{\hyperlink{class_manager_a5bc87fac1281345791c2a0eec09f951a}{m\+\_\+p\+Scene}} = nullptr
+\begin{DoxyCompactList}\small\item\em pointer to scene class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_manager}{Manager} class. 
+
+This class is responsible for managing the application. It controls the flow of the application 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_manager_af8c57a8c8572684ca6999f30d5d00685}\label{class_manager_af8c57a8c8572684ca6999f30d5d00685} 
+\index{Manager@{Manager}!Draw@{Draw}}
+\index{Draw@{Draw}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Manager\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Draw function~\newline
+ 
+
+This function draws the application. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_manager_ac2a9743e95173aa493749270d2703d0d}\label{class_manager_ac2a9743e95173aa493749270d2703d0d} 
+\index{Manager@{Manager}!Init@{Init}}
+\index{Init@{Init}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Manager\+::\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{HWND}]{h\+Wnd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Init function~\newline
+ 
+
+This function initializes the application. 
+\begin{DoxyParams}{Parameters}
+{\em width} & \+: width of the application window \\
+\hline
+{\em height} & \+: height of the application window \\
+\hline
+{\em h\+Wnd} & \+: handle to the application window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_manager_a20d56cefa4ca57aa690b64e9e564fad9}\label{class_manager_a20d56cefa4ca57aa690b64e9e564fad9} 
+\index{Manager@{Manager}!SetScene@{SetScene}}
+\index{SetScene@{SetScene}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{SetScene()}{SetScene()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void Manager\+::\+Set\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Initialize \doxylink{class_scene}{Scene}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & refers to a child class of \doxylink{class_scene}{Scene} \\
+\hline
+\end{DoxyTemplParams}
+\Hypertarget{class_manager_a970ac333358a47086c4a019ff254899b}\label{class_manager_a970ac333358a47086c4a019ff254899b} 
+\index{Manager@{Manager}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Manager\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Uninit function~\newline
+ 
+
+This functions terminates the application. \Hypertarget{class_manager_af1f0b50eadf21a78f4234ab78fe1f044}\label{class_manager_af1f0b50eadf21a78f4234ab78fe1f044} 
+\index{Manager@{Manager}!Update@{Update}}
+\index{Update@{Update}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Manager\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update function~\newline
+ 
+
+This function updates the application. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_manager_a5bc87fac1281345791c2a0eec09f951a}\label{class_manager_a5bc87fac1281345791c2a0eec09f951a} 
+\index{Manager@{Manager}!m\_pScene@{m\_pScene}}
+\index{m\_pScene@{m\_pScene}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{m\_pScene}{m\_pScene}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene}{Scene}} $>$ Manager\+::m\+\_\+p\+Scene = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+pointer to scene class 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_manager_8h}{Manager.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_manager_8cpp}{Manager.\+cpp}}\end{DoxyCompactItemize}

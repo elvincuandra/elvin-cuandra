@@ -1,0 +1,45 @@
+\doxysection{dx11helper.\+h}
+\hypertarget{dx11helper_8h_source}{}\label{dx11helper_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/dx11helper.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/dx11helper.h}}
+\mbox{\hyperlink{dx11helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <d3d11.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <d3dcompiler.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_direct_x_helper}{DirectXHelper}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00021\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_a87ab619f5d0e913001060a118f75e08c}{CreateConstantBuffer}}(ID3D11Device*\ device,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ byteSize,\ ID3D11Buffer**\ constantBuffer);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_ade7f0819d739d0f51a8b02ae4ccc249f}{CreateConstantBufferWrite}}(ID3D11Device*\ device,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ byteSize,\ ID3D11Buffer**\ constantBuffer);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_a554848ca54cf2b679a8fdc1cca9e7c75}{CreateVertexBufferWrite}}(ID3D11Device*\ device,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ vertexNum,\ \textcolor{keywordtype}{void}*\ vertexData,\ ID3D11Buffer**\ vertexBuffer);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_a087fe70b6d4bf64d2f2eaad5e2843c8d}{CreateIndexBuffer}}(ID3D11Device*\ device,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexNum,\ \textcolor{keywordtype}{void}*\ indexData,\ ID3D11Buffer**\ indexBuffer);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00065\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_a7219dbf4fb25901dea1b80e7e8ded756}{CreateVertexShader}}(ID3D11Device*\ device,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName,\ LPCSTR\ entryPoint,\ LPCSTR\ shaderModel,\ D3D11\_INPUT\_ELEMENT\_DESC*\ layout,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ numElements,\ ID3D11VertexShader**\ ppVertexShader,\ ID3D11InputLayout**\ ppVertexLayout);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_a190399fbf62cf0573237153751eb948c}{CreatePixelShader}}(ID3D11Device*\ device,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName,\ LPCSTR\ entryPoint,\ LPCSTR\ shaderModel,\ ID3D11PixelShader**\ pixelShader);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00088\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_afcdc207d32a1235f5be3580505e95bbf}{CompileShader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName,\ LPCSTR\ entryPoint,\ LPCSTR\ shaderModel,\ \textcolor{keywordtype}{void}**\ shaderObj,\ \textcolor{keywordtype}{size\_t}\&\ ShaderObjSize,\ ID3DBlob**\ ppBlob);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_ac7a1c4e8fcc18a379c9752faba886e50}{CompileShaderFromFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName,\ LPCSTR\ entryPoint,\ LPCSTR\ shaderModel,\ ID3DBlob**\ ppBlob);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ HRESULT\ \mbox{\hyperlink{namespace_direct_x_helper_adb0cba6df2a7ad71ec976cdb779e00dd}{ReadShader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ csoName,\ std::vector<unsigned\ char>\&\ byteArray);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ std::string\ \mbox{\hyperlink{namespace_direct_x_helper_ae6a6d6af61b512b14d971b0374ed4afc}{GetFileExtName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00114\ \}}
+
+\end{DoxyCode}

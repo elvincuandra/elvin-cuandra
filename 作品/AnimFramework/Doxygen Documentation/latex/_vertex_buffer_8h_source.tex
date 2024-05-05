@@ -1,0 +1,53 @@
+\doxysection{Vertex\+Buffer.\+h}
+\hypertarget{_vertex_buffer_8h_source}{}\label{_vertex_buffer_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/VertexBuffer.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/VertexBuffer.h}}
+\mbox{\hyperlink{_vertex_buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VERTEXBUFFER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VERTEXBUFFER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graphics_8h}{Graphics.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex_buffer}{VertexBuffer}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_buffer_a33585f350baef4547f9359848dd28625}{Create}}(\textcolor{keyword}{const}\ std::vector<T>\&\ vertices)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Device>\ pDevice\ =\ \mbox{\hyperlink{class_graphics_ae4eef661f760da55b747edb81bf1059c}{Graphics::GetDevice}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ E\_FAIL;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ hr\ =\ \mbox{\hyperlink{namespace_direct_x_helper_a554848ca54cf2b679a8fdc1cca9e7c75}{DirectXHelper::CreateVertexBufferWrite}}(}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ pDevice.Get(),}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(T),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})vertices.size(),}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)vertices.data(),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}{m\_pVertexBuffer}}.GetAddressOf()}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ assert(hr\ ==\ S\_OK);}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_buffer_a5cce227e623555879628165b9855c614}{SetGPU}}()\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DeviceContext>\ pContext\ =\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Graphics::GetDeviceContext}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stride\ =\ \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ offset\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ pContext-\/>IASetVertexBuffers(0,\ 1,\ \mbox{\hyperlink{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}{m\_pVertexBuffer}}.GetAddressOf(),\ \&stride,\ \&offset);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}{m\_pVertexBuffer}};\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ ID3D11Buffer*\ \mbox{\hyperlink{class_vertex_buffer_a766c527d08131a9375f59f956df3b352}{Get}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}{m\_pVertexBuffer}}.Get();\ \}}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VERTEXBUFFER\_H}}
+
+\end{DoxyCode}

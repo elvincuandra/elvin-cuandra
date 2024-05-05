@@ -1,0 +1,60 @@
+\doxysection{structs.\+h}
+\hypertarget{structs_8h_source}{}\label{structs_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/structs.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/structs.h}}
+\mbox{\hyperlink{structs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <DirectXMath.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\_3D}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a5d6f4cf72c256e19fd1fcfae6a4475fb}{pos}};}
+\DoxyCodeLine{00026\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a18234e4fd849f1bd2e8925658f77f730}{normal}};}
+\DoxyCodeLine{00027\ \ \ \ \ DirectX::XMFLOAT4\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_ae52edacb430b79006ac2e2a0cc8d7117}{diffuse}};}
+\DoxyCodeLine{00028\ \ \ \ \ DirectX::XMFLOAT2\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a849cc27970d4cf5cc78514914b442b6c}{uv}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a89b1e1ebffefcd5e413d30d4fe4633e9}{BoneIdx}}[4];}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_acda04b6721e1df1825aca204212c74e4}{BoneWeight}}[4];}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a03f37e3fb9a908acd533f0407a6e988f}{BoneCount}}\ =\ 0;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_acaa3b8cc38d7874915b49509ad9d2f1b}{Name}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_afb64839cc2c54a9e116f64efbcc88c99}{IndexNum}}\ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_acfffeece8a8efde63954db41b0773d93}{VertexNum}}\ =\ 0;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_a09c889ba78d084163c00a1e52e61b217}{IndexBase}}\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_ad2e2cae57b3bcc96e137dd86a7807765}{VertexBase}}\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{struct_s_u_b_s_e_t_a4c08f9761e879cabb5dadd76c0843685}{MaterialIdx}}\ =\ 0;}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ DirectX::XMFLOAT4\ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_aef20e2784ae59b8c1d6aa5ceb388ed8e}{Ambient}};}
+\DoxyCodeLine{00077\ \ \ \ \ DirectX::XMFLOAT4\ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a8511197ea689aac934c1b184c1f463a3}{Diffuse}};}
+\DoxyCodeLine{00078\ \ \ \ \ DirectX::XMFLOAT4\ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_aed331ffe160a8dbbcaeead6cb837f583}{Specular}};}
+\DoxyCodeLine{00079\ \ \ \ \ DirectX::XMFLOAT4\ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a92b2b1f98b0baeca39a7a7a3cd921a38}{Emission}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a89ab3aa034a4fd5df8d23875fc63b963}{Shininess}};}
+\DoxyCodeLine{00081\ \ \ \ \ BOOL\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_abe51727fc949d41d97b55e355a3d8b01}{TextureEnable}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_ad338241c9096cf18b2a72b50580164be}{Dummy}}[2];}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_w_e_i_g_h_t}{WEIGHT}}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_w_e_i_g_h_t_af0ae29a31c5aa7731720eb8dd9849b66}{BoneName}};}
+\DoxyCodeLine{00098\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_w_e_i_g_h_t_a123be9f2ea4033563270361f0d36b24b}{MeshName}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_w_e_i_g_h_t_a359588b4d8363004ad9b10dc5d97615b}{weight}};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_w_e_i_g_h_t_a6cc23517b9ec20b489a3db516c888142}{vertexIdx}};}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_b_o_n_e}{BONE}}\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_b_o_n_e_a2d1e2e3269ed5c63c16abb35b334575a}{BoneName}};}
+\DoxyCodeLine{00128\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_b_o_n_e_ab497235a03f406b67abd523ff3d6103e}{MeshName}};}
+\DoxyCodeLine{00129\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_b_o_n_e_a02673da82b0297cecf9316c33ca60af8}{ArmatureName}};}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_b_o_n_e_a6184ce49cb717a3e237964ac4a0bb805}{idx}}\ =\ 0;}
+\DoxyCodeLine{00131\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{struct_b_o_n_e_a18a0735769f975535eb22f1caf33ee06}{Matrix}}\ =\ DirectX::XMMatrixIdentity();}
+\DoxyCodeLine{00132\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{struct_b_o_n_e_a2e7388dda5126658077af2f9f3e0d00c}{OffsetMatrix}}\ =\ DirectX::XMMatrixIdentity();}
+\DoxyCodeLine{00133\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{struct_b_o_n_e_aa05e9aae3bcdaea2d296ac520d2d4374}{AnimationMatrix}}\ =\ DirectX::XMMatrixIdentity();}
+\DoxyCodeLine{00134\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{struct_b_o_n_e_abf04b80302a8dc8cc6bab792b330a2db}{Blend1}}\ =\ DirectX::XMMatrixIdentity();}
+\DoxyCodeLine{00135\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{struct_b_o_n_e_aceb2956f8860efbcc5aea317dd8c0b22}{Blend2}}\ =\ DirectX::XMMatrixIdentity();}
+\DoxyCodeLine{00136\ \ \ \ \ std::vector<WEIGHT>\ \mbox{\hyperlink{struct_b_o_n_e_ade160828f48751a546621a1387b63439}{weights}};}
+\DoxyCodeLine{00137\ \};}
+
+\end{DoxyCode}

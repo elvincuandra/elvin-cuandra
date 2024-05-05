@@ -1,0 +1,150 @@
+\doxysection{Player\+Model Class Reference}
+\hypertarget{class_player_model}{}\label{class_player_model}\index{PlayerModel@{PlayerModel}}
+
+
+{\ttfamily \#include $<$Player\+Model.\+h$>$}
+
+Inheritance diagram for Player\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_model_a958e8d0a0512c26bf20303947c93953b}{Show\+Mesh\+Statistics}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_object_aa3e791419d84c4c346ef9499513b8e00}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\item 
+void \mbox{\hyperlink{class_object_aecceec6388c815bb2d016dd297a2c784}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_object_a30c838f94fadf9e8b9e583a2d0815220}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_object_a167a5ff4747ba659cfd4a0e1f8d238df}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_object_aa0d4b6f488ddb1958e1a5eb2269affda}{Uninit\+Base}} ()
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a43c8f1f6568781b4c10ff54e6bf083ef}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Position function~\newline
+ \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a4f77875ca5546a25de7067b24a96bd88}{Get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Rotation function~\newline
+ \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a9664d487488bfb536363931d251bdacb}{Get\+Scale}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a8cfe4332087e6783f1038640a5e7ad04}{Get\+Position\+XM}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a7b400ce2d2023183430df794ca01bff9}{Get\+Rotation\+XM}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a2e71dae189de0910690d5b5b1a4a0ed5}{Get\+Scale\+XM}} () const
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{class_object_a0fca9ad74e3d3589a311d75c76cfd053}{Get\+Transform}} () const
+\item 
+void \mbox{\hyperlink{class_object_ab15a9d47f9cf0f88df2fcb32057f306d}{Set\+Position}} (const Direct\+X\+::\+XMFLOAT3 position)
+\item 
+void \mbox{\hyperlink{class_object_a9bb483520f5f229404a1aaf19c64601c}{Set\+Rotation}} (const Direct\+X\+::\+XMFLOAT3 rotation)
+\item 
+void \mbox{\hyperlink{class_object_a626cdd48f0bf4d810f921ffbf52fcb2a}{Set\+Scale}} (const Direct\+X\+::\+XMFLOAT3 scale)
+\item 
+void \mbox{\hyperlink{class_object_a8d0ea679e0b917e3c32b86799cddba68}{Set\+Transform}} (const float \texorpdfstring{$\ast$}{*}position, const float \texorpdfstring{$\ast$}{*}rotation, const float \texorpdfstring{$\ast$}{*}scale)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_player_model_ac5d028fd15cdcf04240e656b1bf3411b}{Init}} () override
+\item 
+virtual void \mbox{\hyperlink{class_player_model_a126f8e5941862fb69a69fa25b00a4f59}{Update}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_player_model_a8b5f96b13f1cf0f8e37ac56625873103}{Draw}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_player_model_ab5f87a1f5ffb07f8ef8cebe477a78fdd}{Uninit}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_object_a1f5cd7d8803dcc0d9114b9c5163507c6}{Create\+Component}} (const char \texorpdfstring{$\ast$}{*}component\+Name)
+\begin{DoxyCompactList}\small\item\em Create\+Component function~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_object_a2af772de8637314b4b8abf421885a331}{Get\+Component}} (const char \texorpdfstring{$\ast$}{*}component\+Name)
+\begin{DoxyCompactList}\small\item\em Get\+Component function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_model_a2b7533bac6467ff4ae03cb9db2b10618}{Print\+Matrices}} (Direct\+X\+::\+XMFLOAT4\+X4 \&matrix)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_object}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em This variable stores the position of the object. \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\+\_\+rotation}}
+\begin{DoxyCompactList}\small\item\em This variable stores the rotation of the object. \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em This variable stores the scale of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_model_a8b5f96b13f1cf0f8e37ac56625873103}\label{class_player_model_a8b5f96b13f1cf0f8e37ac56625873103} 
+\index{PlayerModel@{PlayerModel}!Draw@{Draw}}
+\index{Draw@{Draw}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_a85345a93d1850e07d2a9d223d2a0caec}{Object}}.
+
+\Hypertarget{class_player_model_ac5d028fd15cdcf04240e656b1bf3411b}\label{class_player_model_ac5d028fd15cdcf04240e656b1bf3411b} 
+\index{PlayerModel@{PlayerModel}!Init@{Init}}
+\index{Init@{Init}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Object}}.
+
+\Hypertarget{class_player_model_a2b7533bac6467ff4ae03cb9db2b10618}\label{class_player_model_a2b7533bac6467ff4ae03cb9db2b10618} 
+\index{PlayerModel@{PlayerModel}!PrintMatrices@{PrintMatrices}}
+\index{PrintMatrices@{PrintMatrices}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{PrintMatrices()}{PrintMatrices()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Print\+Matrices (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4\+X4 \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_model_a958e8d0a0512c26bf20303947c93953b}\label{class_player_model_a958e8d0a0512c26bf20303947c93953b} 
+\index{PlayerModel@{PlayerModel}!ShowMeshStatistics@{ShowMeshStatistics}}
+\index{ShowMeshStatistics@{ShowMeshStatistics}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{ShowMeshStatistics()}{ShowMeshStatistics()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Show\+Mesh\+Statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_player_model_ab5f87a1f5ffb07f8ef8cebe477a78fdd}\label{class_player_model_ab5f87a1f5ffb07f8ef8cebe477a78fdd} 
+\index{PlayerModel@{PlayerModel}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Object}}.
+
+\Hypertarget{class_player_model_a126f8e5941862fb69a69fa25b00a4f59}\label{class_player_model_a126f8e5941862fb69a69fa25b00a4f59} 
+\index{PlayerModel@{PlayerModel}!Update@{Update}}
+\index{Update@{Update}!PlayerModel@{PlayerModel}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Model\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_a6f730d3e4c42a63fe2fec85080234048}{Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_player_model_8h}{Player\+Model.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_player_model_8cpp}{Player\+Model.\+cpp}}\end{DoxyCompactItemize}

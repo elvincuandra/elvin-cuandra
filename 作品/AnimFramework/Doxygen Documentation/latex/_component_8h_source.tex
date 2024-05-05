@@ -1,0 +1,28 @@
+\doxysection{Component.\+h}
+\hypertarget{_component_8h_source}{}\label{_component_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Component.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Component.h}}
+\mbox{\hyperlink{_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMPONENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMPONENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_aed37c69469e2109d0a35235367dab687}{InitBase}}()\ \{\ \mbox{\hyperlink{class_component_a0bb954fe977d71269e2db01bc8a77e95}{Init}}();\ \};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_ab34642e3b1dca0a75e40cc38ed5c88aa}{UpdateBase}}(uint64\_t\ deltaTime)\ \{\ \mbox{\hyperlink{class_component_a1eaa03e0fdda87936e2c29ce620f6f60}{Update}}(deltaTime);\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_abf94b17a1ac4a03bb0260cde1370979e}{DrawBase}}(uint64\_t\ deltaTime)\ \{\ \mbox{\hyperlink{class_component_a2e546abb3e316740939bb57c03369e37}{Draw}}(deltaTime);\ \};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a4cfb704d496cd914635a84c5c026bf40}{UninitBase}}()\ \{\ \mbox{\hyperlink{class_component_aa823c6a4ce46d3ae5242910325e397a6}{Uninit}}();\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a0bb954fe977d71269e2db01bc8a77e95}{Init}}()\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a1eaa03e0fdda87936e2c29ce620f6f60}{Update}}(uint64\_t\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a2e546abb3e316740939bb57c03369e37}{Draw}}(uint64\_t\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_aa823c6a4ce46d3ae5242910325e397a6}{Uninit}}()\ =\ 0;}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMPONENT\_H}}
+
+\end{DoxyCode}

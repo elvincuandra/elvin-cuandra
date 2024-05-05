@@ -1,0 +1,39 @@
+\doxysection{Shader.\+h}
+\hypertarget{_shader_8h_source}{}\label{_shader_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Shader.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Shader.h}}
+\mbox{\hyperlink{_shader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SHADER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SHADER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wrl/client.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graphics_8h}{Graphics.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shader}{Shader}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shader_a265a06c6308954733d3a651ddf798358}{SetShader}}(std::string\ vs,\ std::string\ ps);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shader_a811382542f994084a86f29606d5255ed}{SetGPU}}();}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11VertexShader>\ \mbox{\hyperlink{class_shader_a4881e299d14101dd9f8ee161df13a079}{m\_pVertexShader}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11PixelShader>\ \mbox{\hyperlink{class_shader_a2cf295dca549517fe434ec5d058354a2}{m\_pPixelShader}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11InputLayout>\ \mbox{\hyperlink{class_shader_ac3cbf914c6a597a4fa041df0ff2c31fa}{m\_pInputLayout}};\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ ID3D11VertexShader*\ \mbox{\hyperlink{class_shader_aab11cc049ec1ce1897a96fbc3ec34010}{GetVertexShader}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_shader_a4881e299d14101dd9f8ee161df13a079}{m\_pVertexShader}}.Get();\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00041\ \ \ \ \ ID3D11PixelShader*\ \mbox{\hyperlink{class_shader_ab530be643863fcdd71e33d2733e33cae}{GetPixelShader}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_shader_a2cf295dca549517fe434ec5d058354a2}{m\_pPixelShader}}.Get();\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ ID3D11InputLayout*\ \mbox{\hyperlink{class_shader_a063008c2083b02b4b7bac574263cd397}{GetInputLayout}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_shader_ac3cbf914c6a597a4fa041df0ff2c31fa}{m\_pInputLayout}}.Get();\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SHADER\_H}}
+
+\end{DoxyCode}

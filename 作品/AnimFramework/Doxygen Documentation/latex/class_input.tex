@@ -1,0 +1,129 @@
+\doxysection{Input Class Reference}
+\hypertarget{class_input}{}\label{class_input}\index{Input@{Input}}
+
+
+\doxylink{class_input}{Input} class.  
+
+
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_input_a5197114da7299198826ff7277ee12bff}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Init function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_af80dcfde6dbfe39bf3bc0345c75595ce}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update function~\newline
+ \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a04012701bf4e7aae70e72960fef09593}{Is\+Key\+Press}} (BYTE key\+Code)
+\begin{DoxyCompactList}\small\item\em Is\+Key\+Press function~\newline
+ \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_af0664644880827ffcf2f01c73fe260b2}{Is\+Key\+Trigger}} (BYTE key\+Code)
+\begin{DoxyCompactList}\small\item\em Is\+Key\+Trigger function~\newline
+ \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a4dec201d8c7a277f5a038a279f73a1b7}{Is\+Key\+Release}} (BYTE key\+Code)
+\begin{DoxyCompactList}\small\item\em Is\+Key\+Release function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static BYTE \mbox{\hyperlink{class_input_a41c48aaaaa420f875b535d49373b367c}{m\+\_\+keys}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em This variable stores the current state of the keys. \end{DoxyCompactList}\item 
+static BYTE \mbox{\hyperlink{class_input_ac8f14eaf0050d7c0dfa1360e8b4abf28}{m\+\_\+prev\+Keys}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em This variable stores the previous state of the keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_input}{Input} class. 
+
+This class is responsible for handling input from the user. It is responsible for initializing, updating, and handling input from the user. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_a5197114da7299198826ff7277ee12bff}\label{class_input_a5197114da7299198826ff7277ee12bff} 
+\index{Input@{Input}!Init@{Init}}
+\index{Init@{Init}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Input\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Init function~\newline
+ 
+
+This function initializes the input. ~\newline
+ \Hypertarget{class_input_a04012701bf4e7aae70e72960fef09593}\label{class_input_a04012701bf4e7aae70e72960fef09593} 
+\index{Input@{Input}!IsKeyPress@{IsKeyPress}}
+\index{IsKeyPress@{IsKeyPress}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{IsKeyPress()}{IsKeyPress()}}
+{\footnotesize\ttfamily bool Input\+::\+Is\+Key\+Press (\begin{DoxyParamCaption}\item[{BYTE}]{key\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is\+Key\+Press function~\newline
+ 
+
+This function checks if a key is pressed. \Hypertarget{class_input_a4dec201d8c7a277f5a038a279f73a1b7}\label{class_input_a4dec201d8c7a277f5a038a279f73a1b7} 
+\index{Input@{Input}!IsKeyRelease@{IsKeyRelease}}
+\index{IsKeyRelease@{IsKeyRelease}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{IsKeyRelease()}{IsKeyRelease()}}
+{\footnotesize\ttfamily bool Input\+::\+Is\+Key\+Release (\begin{DoxyParamCaption}\item[{BYTE}]{key\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is\+Key\+Release function~\newline
+ 
+
+This function checks if a key is released. \Hypertarget{class_input_af0664644880827ffcf2f01c73fe260b2}\label{class_input_af0664644880827ffcf2f01c73fe260b2} 
+\index{Input@{Input}!IsKeyTrigger@{IsKeyTrigger}}
+\index{IsKeyTrigger@{IsKeyTrigger}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{IsKeyTrigger()}{IsKeyTrigger()}}
+{\footnotesize\ttfamily bool Input\+::\+Is\+Key\+Trigger (\begin{DoxyParamCaption}\item[{BYTE}]{key\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Is\+Key\+Trigger function~\newline
+ 
+
+This function checks if a key is triggered. \Hypertarget{class_input_af80dcfde6dbfe39bf3bc0345c75595ce}\label{class_input_af80dcfde6dbfe39bf3bc0345c75595ce} 
+\index{Input@{Input}!Update@{Update}}
+\index{Update@{Update}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Input\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update function~\newline
+ 
+
+This function updates the input. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_input_a41c48aaaaa420f875b535d49373b367c}\label{class_input_a41c48aaaaa420f875b535d49373b367c} 
+\index{Input@{Input}!m\_keys@{m\_keys}}
+\index{m\_keys@{m\_keys}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{m\_keys}{m\_keys}}
+{\footnotesize\ttfamily BYTE Input\+::m\+\_\+keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the current state of the keys. 
+
+\Hypertarget{class_input_ac8f14eaf0050d7c0dfa1360e8b4abf28}\label{class_input_ac8f14eaf0050d7c0dfa1360e8b4abf28} 
+\index{Input@{Input}!m\_prevKeys@{m\_prevKeys}}
+\index{m\_prevKeys@{m\_prevKeys}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{m\_prevKeys}{m\_prevKeys}}
+{\footnotesize\ttfamily BYTE Input\+::m\+\_\+prev\+Keys\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the previous state of the keys. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_input_8h}{Input.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_input_8cpp}{Input.\+cpp}}\end{DoxyCompactItemize}

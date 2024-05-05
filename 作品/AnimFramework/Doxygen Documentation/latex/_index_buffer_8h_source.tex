@@ -1,0 +1,48 @@
+\doxysection{Index\+Buffer.\+h}
+\hypertarget{_index_buffer_8h_source}{}\label{_index_buffer_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/IndexBuffer.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/IndexBuffer.h}}
+\mbox{\hyperlink{_index_buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INDEXBUFFER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INDEXBUFFER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graphics_8h}{Graphics.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_index_buffer}{IndexBuffer}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c}{Create}}(\textcolor{keyword}{const}\ std::vector<unsigned\ int>\&\ indices)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Device>\ pDevice\ =\ \mbox{\hyperlink{class_graphics_ae4eef661f760da55b747edb81bf1059c}{Graphics::GetDevice}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ HRESULT\ hr;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ hr\ =\ \mbox{\hyperlink{namespace_direct_x_helper_a087fe70b6d4bf64d2f2eaad5e2843c8d}{DirectXHelper::CreateIndexBuffer}}(}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ pDevice.Get(),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})indices.size(),}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*)indices.data(),}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}{m\_pIndexBuffer}}.GetAddressOf()}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ assert(hr\ ==\ S\_OK);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9}{SetGPU}}()\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DeviceContext>\ pContext\ =\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Graphics::GetDeviceContext}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ pContext-\/>IASetIndexBuffer(\mbox{\hyperlink{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}{m\_pIndexBuffer}}.Get(),\ DXGI\_FORMAT\_R32\_UINT,\ 0);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}{m\_pIndexBuffer}};\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \ \ ID3D11Buffer*\ \mbox{\hyperlink{class_index_buffer_a712ac9c221722db5c8ca402c6b1d7858}{Get}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}{m\_pIndexBuffer}}.Get();\ \}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INDEXBUFFER\_H}}
+
+\end{DoxyCode}

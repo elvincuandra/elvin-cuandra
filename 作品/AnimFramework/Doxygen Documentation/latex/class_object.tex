@@ -1,0 +1,337 @@
+\doxysection{Object Class Reference}
+\hypertarget{class_object}{}\label{class_object}\index{Object@{Object}}
+
+
+\doxylink{class_object}{Object} class.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_object_aa3e791419d84c4c346ef9499513b8e00}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\item 
+void \mbox{\hyperlink{class_object_aecceec6388c815bb2d016dd297a2c784}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_object_a30c838f94fadf9e8b9e583a2d0815220}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_object_a167a5ff4747ba659cfd4a0e1f8d238df}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_object_aa0d4b6f488ddb1958e1a5eb2269affda}{Uninit\+Base}} ()
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a43c8f1f6568781b4c10ff54e6bf083ef}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Position function~\newline
+ \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a4f77875ca5546a25de7067b24a96bd88}{Get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Rotation function~\newline
+ \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a9664d487488bfb536363931d251bdacb}{Get\+Scale}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a8cfe4332087e6783f1038640a5e7ad04}{Get\+Position\+XM}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a7b400ce2d2023183430df794ca01bff9}{Get\+Rotation\+XM}} () const
+\item 
+Direct\+X\+::\+XMVECTOR \mbox{\hyperlink{class_object_a2e71dae189de0910690d5b5b1a4a0ed5}{Get\+Scale\+XM}} () const
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{class_object_a0fca9ad74e3d3589a311d75c76cfd053}{Get\+Transform}} () const
+\item 
+void \mbox{\hyperlink{class_object_ab15a9d47f9cf0f88df2fcb32057f306d}{Set\+Position}} (const Direct\+X\+::\+XMFLOAT3 position)
+\item 
+void \mbox{\hyperlink{class_object_a9bb483520f5f229404a1aaf19c64601c}{Set\+Rotation}} (const Direct\+X\+::\+XMFLOAT3 rotation)
+\item 
+void \mbox{\hyperlink{class_object_a626cdd48f0bf4d810f921ffbf52fcb2a}{Set\+Scale}} (const Direct\+X\+::\+XMFLOAT3 scale)
+\item 
+void \mbox{\hyperlink{class_object_a8d0ea679e0b917e3c32b86799cddba68}{Set\+Transform}} (const float \texorpdfstring{$\ast$}{*}position, const float \texorpdfstring{$\ast$}{*}rotation, const float \texorpdfstring{$\ast$}{*}scale)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_object_a6f730d3e4c42a63fe2fec85080234048}{Update}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_object_a85345a93d1850e07d2a9d223d2a0caec}{Draw}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Uninit}} ()=0
+\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_object_a1f5cd7d8803dcc0d9114b9c5163507c6}{Create\+Component}} (const char \texorpdfstring{$\ast$}{*}component\+Name)
+\begin{DoxyCompactList}\small\item\em Create\+Component function~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_object_a2af772de8637314b4b8abf421885a331}{Get\+Component}} (const char \texorpdfstring{$\ast$}{*}component\+Name)
+\begin{DoxyCompactList}\small\item\em Get\+Component function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em This variable stores the position of the object. \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\+\_\+rotation}}
+\begin{DoxyCompactList}\small\item\em This variable stores the rotation of the object. \end{DoxyCompactList}\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em This variable stores the scale of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_component}{Component}} $>$ $>$ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\+\_\+components}}
+\begin{DoxyCompactList}\small\item\em This variable stores the components in the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_object}{Object} class. 
+
+This class is the base class for all objects. It is responsible for the initialization, update, rendering, and termination of components contained within the container, as well as \doxylink{class_object}{Object}\textquotesingle{}s child classes\textquotesingle{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_object_aa3e791419d84c4c346ef9499513b8e00}\label{class_object_aa3e791419d84c4c346ef9499513b8e00} 
+\index{Object@{Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily virtual Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_object_a1f5cd7d8803dcc0d9114b9c5163507c6}\label{class_object_a1f5cd7d8803dcc0d9114b9c5163507c6} 
+\index{Object@{Object}!CreateComponent@{CreateComponent}}
+\index{CreateComponent@{CreateComponent}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{CreateComponent()}{CreateComponent()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \texorpdfstring{$\ast$}{*} Object\+::\+Create\+Component (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{component\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Create\+Component function~\newline
+ 
+
+This function creates a component of type T and adds it to the object. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & refers to a child class of \doxylink{class_component}{Component} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em component\+Name} & \+: name of the component \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_a85345a93d1850e07d2a9d223d2a0caec}\label{class_object_a85345a93d1850e07d2a9d223d2a0caec} 
+\index{Object@{Object}!Draw@{Draw}}
+\index{Draw@{Draw}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_camera_a1816fd43619890b38e5c418d6a95434c}{Camera}}, and \mbox{\hyperlink{class_player_model_a8b5f96b13f1cf0f8e37ac56625873103}{Player\+Model}}.
+
+\Hypertarget{class_object_a167a5ff4747ba659cfd4a0e1f8d238df}\label{class_object_a167a5ff4747ba659cfd4a0e1f8d238df} 
+\index{Object@{Object}!DrawBase@{DrawBase}}
+\index{DrawBase@{DrawBase}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{DrawBase()}{DrawBase()}}
+{\footnotesize\ttfamily void Object\+::\+Draw\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a2af772de8637314b4b8abf421885a331}\label{class_object_a2af772de8637314b4b8abf421885a331} 
+\index{Object@{Object}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \texorpdfstring{$\ast$}{*} Object\+::\+Get\+Component (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{component\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get\+Component function~\newline
+ 
+
+This function returns a component of type T from the existing m\+\_\+components map container. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & refers to a child class of \doxylink{class_component}{Component} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em component\+Name} & \+: name of the component \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_a43c8f1f6568781b4c10ff54e6bf083ef}\label{class_object_a43c8f1f6568781b4c10ff54e6bf083ef} 
+\index{Object@{Object}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Position function~\newline
+ 
+
+This function returns the position of the object. \begin{DoxyReturn}{Returns}
+m\+\_\+position \+: position of the object 
+\end{DoxyReturn}
+\Hypertarget{class_object_a8cfe4332087e6783f1038640a5e7ad04}\label{class_object_a8cfe4332087e6783f1038640a5e7ad04} 
+\index{Object@{Object}!GetPositionXM@{GetPositionXM}}
+\index{GetPositionXM@{GetPositionXM}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPositionXM()}{GetPositionXM()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMVECTOR Object\+::\+Get\+Position\+XM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a4f77875ca5546a25de7067b24a96bd88}\label{class_object_a4f77875ca5546a25de7067b24a96bd88} 
+\index{Object@{Object}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Rotation function~\newline
+ 
+
+\Hypertarget{class_object_a7b400ce2d2023183430df794ca01bff9}\label{class_object_a7b400ce2d2023183430df794ca01bff9} 
+\index{Object@{Object}!GetRotationXM@{GetRotationXM}}
+\index{GetRotationXM@{GetRotationXM}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetRotationXM()}{GetRotationXM()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMVECTOR Object\+::\+Get\+Rotation\+XM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a9664d487488bfb536363931d251bdacb}\label{class_object_a9664d487488bfb536363931d251bdacb} 
+\index{Object@{Object}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a2e71dae189de0910690d5b5b1a4a0ed5}\label{class_object_a2e71dae189de0910690d5b5b1a4a0ed5} 
+\index{Object@{Object}!GetScaleXM@{GetScaleXM}}
+\index{GetScaleXM@{GetScaleXM}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetScaleXM()}{GetScaleXM()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMVECTOR Object\+::\+Get\+Scale\+XM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a0fca9ad74e3d3589a311d75c76cfd053}\label{class_object_a0fca9ad74e3d3589a311d75c76cfd053} 
+\index{Object@{Object}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMMATRIX Object\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a7254c74e9926c9c9e5076b606dbfc962}\label{class_object_a7254c74e9926c9c9e5076b606dbfc962} 
+\index{Object@{Object}!Init@{Init}}
+\index{Init@{Init}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_camera_a5505545a402c6674b302c26e8348983a}{Camera}}, and \mbox{\hyperlink{class_player_model_ac5d028fd15cdcf04240e656b1bf3411b}{Player\+Model}}.
+
+\Hypertarget{class_object_aecceec6388c815bb2d016dd297a2c784}\label{class_object_aecceec6388c815bb2d016dd297a2c784} 
+\index{Object@{Object}!InitBase@{InitBase}}
+\index{InitBase@{InitBase}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{InitBase()}{InitBase()}}
+{\footnotesize\ttfamily void Object\+::\+Init\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_ab15a9d47f9cf0f88df2fcb32057f306d}\label{class_object_ab15a9d47f9cf0f88df2fcb32057f306d} 
+\index{Object@{Object}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Object\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+XMFLOAT3}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a9bb483520f5f229404a1aaf19c64601c}\label{class_object_a9bb483520f5f229404a1aaf19c64601c} 
+\index{Object@{Object}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily void Object\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+XMFLOAT3}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a626cdd48f0bf4d810f921ffbf52fcb2a}\label{class_object_a626cdd48f0bf4d810f921ffbf52fcb2a} 
+\index{Object@{Object}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void Object\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const Direct\+X\+::\+XMFLOAT3}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a8d0ea679e0b917e3c32b86799cddba68}\label{class_object_a8d0ea679e0b917e3c32b86799cddba68} 
+\index{Object@{Object}!SetTransform@{SetTransform}}
+\index{SetTransform@{SetTransform}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{SetTransform()}{SetTransform()}}
+{\footnotesize\ttfamily void Object\+::\+Set\+Transform (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{position,  }\item[{const float \texorpdfstring{$\ast$}{*}}]{rotation,  }\item[{const float \texorpdfstring{$\ast$}{*}}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}\label{class_object_abdcaa08db039b5deb37d5ac6b1377c9f} 
+\index{Object@{Object}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_camera_a9bdcf48750d9e23f102e52ded0d42e10}{Camera}}, and \mbox{\hyperlink{class_player_model_ab5f87a1f5ffb07f8ef8cebe477a78fdd}{Player\+Model}}.
+
+\Hypertarget{class_object_aa0d4b6f488ddb1958e1a5eb2269affda}\label{class_object_aa0d4b6f488ddb1958e1a5eb2269affda} 
+\index{Object@{Object}!UninitBase@{UninitBase}}
+\index{UninitBase@{UninitBase}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{UninitBase()}{UninitBase()}}
+{\footnotesize\ttfamily void Object\+::\+Uninit\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_object_a6f730d3e4c42a63fe2fec85080234048}\label{class_object_a6f730d3e4c42a63fe2fec85080234048} 
+\index{Object@{Object}!Update@{Update}}
+\index{Update@{Update}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_camera_a198e64dd744aa53e511aecb3c2063fd4}{Camera}}, and \mbox{\hyperlink{class_player_model_a126f8e5941862fb69a69fa25b00a4f59}{Player\+Model}}.
+
+\Hypertarget{class_object_a30c838f94fadf9e8b9e583a2d0815220}\label{class_object_a30c838f94fadf9e8b9e583a2d0815220} 
+\index{Object@{Object}!UpdateBase@{UpdateBase}}
+\index{UpdateBase@{UpdateBase}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{UpdateBase()}{UpdateBase()}}
+{\footnotesize\ttfamily void Object\+::\+Update\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_object_aa5af7c942d1f56547e3ab577474705e0}\label{class_object_aa5af7c942d1f56547e3ab577474705e0} 
+\index{Object@{Object}!m\_components@{m\_components}}
+\index{m\_components@{m\_components}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{m\_components}{m\_components}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_component}{Component}}$>$ $>$ Object\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the components in the object. 
+
+\Hypertarget{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}\label{class_object_a53d1e6ba75ca1c271f2337382ca58f7c} 
+\index{Object@{Object}!m\_position@{m\_position}}
+\index{m\_position@{m\_position}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{m\_position}{m\_position}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This variable stores the position of the object. 
+
+\Hypertarget{class_object_aee08b7eec31328093df49862f316b3fe}\label{class_object_aee08b7eec31328093df49862f316b3fe} 
+\index{Object@{Object}!m\_rotation@{m\_rotation}}
+\index{m\_rotation@{m\_rotation}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{m\_rotation}{m\_rotation}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::m\+\_\+rotation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This variable stores the rotation of the object. 
+
+\Hypertarget{class_object_a308f0e44a53f75c1f452fcb1f59c3352}\label{class_object_a308f0e44a53f75c1f452fcb1f59c3352} 
+\index{Object@{Object}!m\_scale@{m\_scale}}
+\index{m\_scale@{m\_scale}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{m\_scale}{m\_scale}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT3 Object\+::m\+\_\+scale\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This variable stores the scale of the object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_object_8h}{Object.\+h}}\end{DoxyCompactItemize}

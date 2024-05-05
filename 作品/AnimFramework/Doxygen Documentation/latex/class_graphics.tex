@@ -1,0 +1,410 @@
+\doxysection{Graphics Class Reference}
+\hypertarget{class_graphics}{}\label{class_graphics}\index{Graphics@{Graphics}}
+
+
+\doxylink{class_graphics}{Graphics} class (Renderer class)  
+
+
+
+
+{\ttfamily \#include $<$Graphics.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}{Graphics}} ()
+\item 
+const \mbox{\hyperlink{class_graphics}{Graphics}} \& \mbox{\hyperlink{class_graphics_a75a3ba91b37d7ce3f67a7c68a7466e74}{operator=}} (const \mbox{\hyperlink{class_graphics}{Graphics}} \&)=delete
+\item 
+\mbox{\hyperlink{class_graphics_abe2f13f24a1d35c55fdac10a282744eb}{Graphics}} (const \mbox{\hyperlink{class_graphics}{Graphics}} \&)=delete
+\item 
+\mbox{\hyperlink{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}{\texorpdfstring{$\sim$}{\string~}\+Graphics}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static HRESULT \mbox{\hyperlink{class_graphics_a09cef4623098bf136b4a3539fb8c25ac}{Init}} (uint32\+\_\+t width, uint32\+\_\+t height, HWND h\+Wnd, bool vsync=false, bool fullscreen=false)
+\begin{DoxyCompactList}\small\item\em Init function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_graphics_a4e4ae3da9d4d011f1cd60e2c71b6812b}{Begin}} ()
+\item 
+static void \mbox{\hyperlink{class_graphics_a3f004cbb174ebaa0e24765d79cdc9cd2}{End}} ()
+\item 
+static void \mbox{\hyperlink{class_graphics_ae5add0a9c849c286b979ff87d023b764}{Shutdown}} ()
+\item 
+static ID3\+D11\+Device \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graphics_ae4eef661f760da55b747edb81bf1059c}{Get\+Device}} ()
+\item 
+static ID3\+D11\+Device\+Context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Get\+Device\+Context}} ()
+\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_a44784fde5086f6e420a225b9900244a2}{Get\+World}} ()
+\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_aa1223e5ce265a4899c07764303fd0d2b}{Get\+View}} ()
+\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_a9db6637ecac1537f4dd419a9603a9462}{Get\+Proj}} ()
+\item 
+static void \mbox{\hyperlink{class_graphics_a19871b3e831626e713341ad23b09e220}{Set\+World}} (Direct\+X\+::\+XMMATRIX world)
+\begin{DoxyCompactList}\small\item\em Set\+World function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_graphics_ab93e0366e20bd5f3f0dcdb6fd17f3853}{Set\+View}} (Direct\+X\+::\+XMMATRIX view)
+\begin{DoxyCompactList}\small\item\em Set\+View function~\newline
+ \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_graphics_a20d5c68d3bd16e79d596812a5141e49f}{Set\+Proj}} (Direct\+X\+::\+XMMATRIX proj)
+\begin{DoxyCompactList}\small\item\em Set\+Proj function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Com\+Ptr$<$ ID3\+D11\+Device $>$ \mbox{\hyperlink{class_graphics_a95c2f8c7014afe3df577234838b199bf}{m\+\_\+p\+Device}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the device. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Device\+Context $>$ \mbox{\hyperlink{class_graphics_af1c506310d28eb96cd6ff86a5b7c7ed6}{m\+\_\+p\+Device\+Context}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the device context. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ IDXGISwap\+Chain $>$ \mbox{\hyperlink{class_graphics_a92153cfda61cf8173cf9446aa22a4cc4}{m\+\_\+p\+Swap\+Chain}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the swap chain. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Render\+Target\+View $>$ \mbox{\hyperlink{class_graphics_a3481b65eab36bf7fae881c96215bf1d3}{m\+\_\+p\+Render\+Target\+View}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the render target view. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Depth\+Stencil\+State $>$ \mbox{\hyperlink{class_graphics_a9a865857fbb2af0db0bf4d41ae25a46e}{m\+\_\+p\+Depth\+Stencil\+State}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the depth stencil state. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Depth\+Stencil\+View $>$ \mbox{\hyperlink{class_graphics_a9d20be5ac8b11514de21dd3131029768}{m\+\_\+p\+Depth\+Stencil\+View}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the depth stencil view. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Rasterizer\+State $>$ \mbox{\hyperlink{class_graphics_af56ffaaeda3f8686ad6f7f8f81195ee5}{m\+\_\+p\+Rasterizer\+State}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the rasterizer state. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Sampler\+State $>$ \mbox{\hyperlink{class_graphics_a478558a32c5066274c17c24b051df997}{m\+\_\+p\+Sampler\+State}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the sampler state. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_graphics_aff3fa95cf830c8446c7b91c04fc2f3c8}{m\+\_\+p\+World\+Buffer}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the world buffer. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_graphics_a4ddcb76ec0a7833044084fe995f7fde6}{m\+\_\+p\+View\+Buffer}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the view buffer. \end{DoxyCompactList}\item 
+static Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_graphics_af6a7ff030aeaf2f29f00154df6644130}{m\+\_\+p\+Proj\+Buffer}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the projection buffer. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_graphics_a46183ee631094641329f68f5cc36397e}{m\+\_\+vsync}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the vsync. \end{DoxyCompactList}\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_a61abdca656eb039d41176c37baed3e63}{m\+\_\+world}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the world matrix. \end{DoxyCompactList}\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_a26fdb136d081c05d7274e9a2bdfee936}{m\+\_\+view}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the view matrix. \end{DoxyCompactList}\item 
+static Direct\+X\+::\+XMFLOAT4\+X4 \mbox{\hyperlink{class_graphics_ab4418999a3f735b7dda8522ebd4f1ba8}{m\+\_\+proj}} \{\}
+\begin{DoxyCompactList}\small\item\em This variable stores the projection matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_graphics}{Graphics} class (Renderer class) 
+
+This class is responsible for initializing, updating, drawing, and terminating the graphics. It initializes the graphics, sets the world, view, and projection matrices, and draws the graphics. It is essentially a wrapper for the Direct3D 11 API. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}\label{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c} 
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{Graphics()}{Graphics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_graphics_abe2f13f24a1d35c55fdac10a282744eb}\label{class_graphics_abe2f13f24a1d35c55fdac10a282744eb} 
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{Graphics()}{Graphics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Graphics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_graphics}{Graphics}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}\label{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb} 
+\index{Graphics@{Graphics}!````~Graphics@{\texorpdfstring{$\sim$}{\string~}Graphics}}
+\index{````~Graphics@{\texorpdfstring{$\sim$}{\string~}Graphics}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Graphics()}{\string~Graphics()}}
+{\footnotesize\ttfamily Graphics\+::\texorpdfstring{$\sim$}{\string~}\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_graphics_a4e4ae3da9d4d011f1cd60e2c71b6812b}\label{class_graphics_a4e4ae3da9d4d011f1cd60e2c71b6812b} 
+\index{Graphics@{Graphics}!Begin@{Begin}}
+\index{Begin@{Begin}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily void Graphics\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Begin function~\newline
+ This function begins the rendering process. Clears the back buffer and depth buffer. \Hypertarget{class_graphics_a3f004cbb174ebaa0e24765d79cdc9cd2}\label{class_graphics_a3f004cbb174ebaa0e24765d79cdc9cd2} 
+\index{Graphics@{Graphics}!End@{End}}
+\index{End@{End}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily void Graphics\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Draw function~\newline
+ This function draws the graphics. \Hypertarget{class_graphics_ae4eef661f760da55b747edb81bf1059c}\label{class_graphics_ae4eef661f760da55b747edb81bf1059c} 
+\index{Graphics@{Graphics}!GetDevice@{GetDevice}}
+\index{GetDevice@{GetDevice}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{GetDevice()}{GetDevice()}}
+{\footnotesize\ttfamily static ID3\+D11\+Device \texorpdfstring{$\ast$}{*} Graphics\+::\+Get\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get\+Device function~\newline
+ This function returns a pointer the device. \Hypertarget{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}\label{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7} 
+\index{Graphics@{Graphics}!GetDeviceContext@{GetDeviceContext}}
+\index{GetDeviceContext@{GetDeviceContext}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{GetDeviceContext()}{GetDeviceContext()}}
+{\footnotesize\ttfamily static ID3\+D11\+Device\+Context \texorpdfstring{$\ast$}{*} Graphics\+::\+Get\+Device\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get\+Device\+Context function~\newline
+ This function returns a pointer to the device context. \Hypertarget{class_graphics_a9db6637ecac1537f4dd419a9603a9462}\label{class_graphics_a9db6637ecac1537f4dd419a9603a9462} 
+\index{Graphics@{Graphics}!GetProj@{GetProj}}
+\index{GetProj@{GetProj}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{GetProj()}{GetProj()}}
+{\footnotesize\ttfamily static Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::\+Get\+Proj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get\+Proj\+Matrix function~\newline
+ This function returns the projection matrix. \Hypertarget{class_graphics_aa1223e5ce265a4899c07764303fd0d2b}\label{class_graphics_aa1223e5ce265a4899c07764303fd0d2b} 
+\index{Graphics@{Graphics}!GetView@{GetView}}
+\index{GetView@{GetView}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{GetView()}{GetView()}}
+{\footnotesize\ttfamily static Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::\+Get\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get\+View\+Matrix function~\newline
+ This function returns the view matrix. \Hypertarget{class_graphics_a44784fde5086f6e420a225b9900244a2}\label{class_graphics_a44784fde5086f6e420a225b9900244a2} 
+\index{Graphics@{Graphics}!GetWorld@{GetWorld}}
+\index{GetWorld@{GetWorld}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{GetWorld()}{GetWorld()}}
+{\footnotesize\ttfamily static Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::\+Get\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get\+World\+Matrix function~\newline
+ This function returns the world matrix. \Hypertarget{class_graphics_a09cef4623098bf136b4a3539fb8c25ac}\label{class_graphics_a09cef4623098bf136b4a3539fb8c25ac} 
+\index{Graphics@{Graphics}!Init@{Init}}
+\index{Init@{Init}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily HRESULT Graphics\+::\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{HWND}]{h\+Wnd,  }\item[{bool}]{vsync = {\ttfamily false},  }\item[{bool}]{fullscreen = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Init function~\newline
+ 
+
+This function initializes the graphics (Direct3\+D11). 
+\begin{DoxyParams}{Parameters}
+{\em width} & \+: width of the window \\
+\hline
+{\em height} & \+: height of the window \\
+\hline
+{\em h\+Wnd} & \+: handle to the window \\
+\hline
+{\em vsync} & \+: whether to use vsync \\
+\hline
+{\em fullscreen} & \+: whether to use fullscreen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+\_\+\+OK if the graphics is initialized successfully, E\+\_\+\+FAIL otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_graphics_a75a3ba91b37d7ce3f67a7c68a7466e74}\label{class_graphics_a75a3ba91b37d7ce3f67a7c68a7466e74} 
+\index{Graphics@{Graphics}!operator=@{operator=}}
+\index{operator=@{operator=}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_graphics}{Graphics}} \& Graphics\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_graphics}{Graphics}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_graphics_a20d5c68d3bd16e79d596812a5141e49f}\label{class_graphics_a20d5c68d3bd16e79d596812a5141e49f} 
+\index{Graphics@{Graphics}!SetProj@{SetProj}}
+\index{SetProj@{SetProj}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{SetProj()}{SetProj()}}
+{\footnotesize\ttfamily void Graphics\+::\+Set\+Proj (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMMATRIX}]{proj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set\+Proj function~\newline
+ 
+
+This function sets the projection matrix. 
+\begin{DoxyParams}{Parameters}
+{\em proj} & \+: projection matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graphics_ab93e0366e20bd5f3f0dcdb6fd17f3853}\label{class_graphics_ab93e0366e20bd5f3f0dcdb6fd17f3853} 
+\index{Graphics@{Graphics}!SetView@{SetView}}
+\index{SetView@{SetView}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{SetView()}{SetView()}}
+{\footnotesize\ttfamily void Graphics\+::\+Set\+View (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMMATRIX}]{view }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set\+View function~\newline
+ 
+
+This function sets the view matrix. 
+\begin{DoxyParams}{Parameters}
+{\em view} & \+: view matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graphics_a19871b3e831626e713341ad23b09e220}\label{class_graphics_a19871b3e831626e713341ad23b09e220} 
+\index{Graphics@{Graphics}!SetWorld@{SetWorld}}
+\index{SetWorld@{SetWorld}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{SetWorld()}{SetWorld()}}
+{\footnotesize\ttfamily void Graphics\+::\+Set\+World (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMMATRIX}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set\+World function~\newline
+ 
+
+This function sets the world matrix. 
+\begin{DoxyParams}{Parameters}
+{\em world} & \+: world matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_graphics_ae5add0a9c849c286b979ff87d023b764}\label{class_graphics_ae5add0a9c849c286b979ff87d023b764} 
+\index{Graphics@{Graphics}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Graphics\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_graphics_a9a865857fbb2af0db0bf4d41ae25a46e}\label{class_graphics_a9a865857fbb2af0db0bf4d41ae25a46e} 
+\index{Graphics@{Graphics}!m\_pDepthStencilState@{m\_pDepthStencilState}}
+\index{m\_pDepthStencilState@{m\_pDepthStencilState}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pDepthStencilState}{m\_pDepthStencilState}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Depth\+Stencil\+State $>$ Graphics\+::m\+\_\+p\+Depth\+Stencil\+State \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the depth stencil state. 
+
+\Hypertarget{class_graphics_a9d20be5ac8b11514de21dd3131029768}\label{class_graphics_a9d20be5ac8b11514de21dd3131029768} 
+\index{Graphics@{Graphics}!m\_pDepthStencilView@{m\_pDepthStencilView}}
+\index{m\_pDepthStencilView@{m\_pDepthStencilView}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pDepthStencilView}{m\_pDepthStencilView}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Depth\+Stencil\+View $>$ Graphics\+::m\+\_\+p\+Depth\+Stencil\+View \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the depth stencil view. 
+
+\Hypertarget{class_graphics_a95c2f8c7014afe3df577234838b199bf}\label{class_graphics_a95c2f8c7014afe3df577234838b199bf} 
+\index{Graphics@{Graphics}!m\_pDevice@{m\_pDevice}}
+\index{m\_pDevice@{m\_pDevice}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pDevice}{m\_pDevice}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Device $>$ Graphics\+::m\+\_\+p\+Device \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the device. 
+
+\Hypertarget{class_graphics_af1c506310d28eb96cd6ff86a5b7c7ed6}\label{class_graphics_af1c506310d28eb96cd6ff86a5b7c7ed6} 
+\index{Graphics@{Graphics}!m\_pDeviceContext@{m\_pDeviceContext}}
+\index{m\_pDeviceContext@{m\_pDeviceContext}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pDeviceContext}{m\_pDeviceContext}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Device\+Context $>$ Graphics\+::m\+\_\+p\+Device\+Context \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the device context. 
+
+\Hypertarget{class_graphics_af6a7ff030aeaf2f29f00154df6644130}\label{class_graphics_af6a7ff030aeaf2f29f00154df6644130} 
+\index{Graphics@{Graphics}!m\_pProjBuffer@{m\_pProjBuffer}}
+\index{m\_pProjBuffer@{m\_pProjBuffer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pProjBuffer}{m\_pProjBuffer}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Buffer $>$ Graphics\+::m\+\_\+p\+Proj\+Buffer \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the projection buffer. 
+
+\Hypertarget{class_graphics_af56ffaaeda3f8686ad6f7f8f81195ee5}\label{class_graphics_af56ffaaeda3f8686ad6f7f8f81195ee5} 
+\index{Graphics@{Graphics}!m\_pRasterizerState@{m\_pRasterizerState}}
+\index{m\_pRasterizerState@{m\_pRasterizerState}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pRasterizerState}{m\_pRasterizerState}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Rasterizer\+State $>$ Graphics\+::m\+\_\+p\+Rasterizer\+State \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the rasterizer state. 
+
+\Hypertarget{class_graphics_a3481b65eab36bf7fae881c96215bf1d3}\label{class_graphics_a3481b65eab36bf7fae881c96215bf1d3} 
+\index{Graphics@{Graphics}!m\_pRenderTargetView@{m\_pRenderTargetView}}
+\index{m\_pRenderTargetView@{m\_pRenderTargetView}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pRenderTargetView}{m\_pRenderTargetView}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Render\+Target\+View $>$ Graphics\+::m\+\_\+p\+Render\+Target\+View \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the render target view. 
+
+\Hypertarget{class_graphics_ab4418999a3f735b7dda8522ebd4f1ba8}\label{class_graphics_ab4418999a3f735b7dda8522ebd4f1ba8} 
+\index{Graphics@{Graphics}!m\_proj@{m\_proj}}
+\index{m\_proj@{m\_proj}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_proj}{m\_proj}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::m\+\_\+proj \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the projection matrix. 
+
+\Hypertarget{class_graphics_a478558a32c5066274c17c24b051df997}\label{class_graphics_a478558a32c5066274c17c24b051df997} 
+\index{Graphics@{Graphics}!m\_pSamplerState@{m\_pSamplerState}}
+\index{m\_pSamplerState@{m\_pSamplerState}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pSamplerState}{m\_pSamplerState}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Sampler\+State $>$ Graphics\+::m\+\_\+p\+Sampler\+State \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the sampler state. 
+
+\Hypertarget{class_graphics_a92153cfda61cf8173cf9446aa22a4cc4}\label{class_graphics_a92153cfda61cf8173cf9446aa22a4cc4} 
+\index{Graphics@{Graphics}!m\_pSwapChain@{m\_pSwapChain}}
+\index{m\_pSwapChain@{m\_pSwapChain}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pSwapChain}{m\_pSwapChain}}
+{\footnotesize\ttfamily Com\+Ptr$<$ IDXGISwap\+Chain $>$ Graphics\+::m\+\_\+p\+Swap\+Chain \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the swap chain. 
+
+\Hypertarget{class_graphics_a4ddcb76ec0a7833044084fe995f7fde6}\label{class_graphics_a4ddcb76ec0a7833044084fe995f7fde6} 
+\index{Graphics@{Graphics}!m\_pViewBuffer@{m\_pViewBuffer}}
+\index{m\_pViewBuffer@{m\_pViewBuffer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pViewBuffer}{m\_pViewBuffer}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Buffer $>$ Graphics\+::m\+\_\+p\+View\+Buffer \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the view buffer. 
+
+\Hypertarget{class_graphics_aff3fa95cf830c8446c7b91c04fc2f3c8}\label{class_graphics_aff3fa95cf830c8446c7b91c04fc2f3c8} 
+\index{Graphics@{Graphics}!m\_pWorldBuffer@{m\_pWorldBuffer}}
+\index{m\_pWorldBuffer@{m\_pWorldBuffer}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_pWorldBuffer}{m\_pWorldBuffer}}
+{\footnotesize\ttfamily Com\+Ptr$<$ ID3\+D11\+Buffer $>$ Graphics\+::m\+\_\+p\+World\+Buffer \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the world buffer. 
+
+\Hypertarget{class_graphics_a26fdb136d081c05d7274e9a2bdfee936}\label{class_graphics_a26fdb136d081c05d7274e9a2bdfee936} 
+\index{Graphics@{Graphics}!m\_view@{m\_view}}
+\index{m\_view@{m\_view}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_view}{m\_view}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::m\+\_\+view \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the view matrix. 
+
+\Hypertarget{class_graphics_a46183ee631094641329f68f5cc36397e}\label{class_graphics_a46183ee631094641329f68f5cc36397e} 
+\index{Graphics@{Graphics}!m\_vsync@{m\_vsync}}
+\index{m\_vsync@{m\_vsync}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_vsync}{m\_vsync}}
+{\footnotesize\ttfamily bool Graphics\+::m\+\_\+vsync \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the vsync. 
+
+\Hypertarget{class_graphics_a61abdca656eb039d41176c37baed3e63}\label{class_graphics_a61abdca656eb039d41176c37baed3e63} 
+\index{Graphics@{Graphics}!m\_world@{m\_world}}
+\index{m\_world@{m\_world}!Graphics@{Graphics}}
+\doxysubsubsection{\texorpdfstring{m\_world}{m\_world}}
+{\footnotesize\ttfamily Direct\+X\+::\+XMFLOAT4\+X4 Graphics\+::m\+\_\+world \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+This variable stores the world matrix. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_graphics_8h}{Graphics.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_graphics_8cpp}{Graphics.\+cpp}}\end{DoxyCompactItemize}

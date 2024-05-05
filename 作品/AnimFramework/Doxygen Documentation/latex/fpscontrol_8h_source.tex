@@ -1,0 +1,58 @@
+\doxysection{fpscontrol.\+h}
+\hypertarget{fpscontrol_8h_source}{}\label{fpscontrol_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/fpscontrol.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/fpscontrol.h}}
+\mbox{\hyperlink{fpscontrol_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_FPS\_CONTROL\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_FPS\_CONTROL\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ comment\ (lib,\ "{}winmm.lib"{})}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_p_s}{FPS}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{/*\ This\ constructor\ initializes\ with\ VFR\ by\ default.\ */}\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a731dd05bb14a606dcb40b6414a95d32c}{FPS}}()\ \{\};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_f_p_s_abd5ce5d592e0f1457db1c69caa53c050}{FPS}}(uint64\_t\ f)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}{m\_MicrosecondsPerFrame}}\ =\ \textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}((1000.f\ *\ 1000.f)\ /\ f);}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00034\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_f_p_s_af02372c3e55e98c6521f7dfd6cf1dd34}{CalcDelta}}()\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}{m\_currentTime}}\ =\ timeGetTime();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a508840c437caf9028d712515a84aa89c}{m\_deltaTime}}\ =\ \mbox{\hyperlink{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}{m\_currentTime}}\ -\/\ \mbox{\hyperlink{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f}{m\_lastTime}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f}{m\_lastTime}}\ =\ \mbox{\hyperlink{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}{m\_currentTime}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_f_p_s_a508840c437caf9028d712515a84aa89c}{m\_deltaTime}};}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_p_s_a1390f1370456c8f3d260563d075c945b}{SetFPS}}(uint64\_t\ f)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}{m\_MicrosecondsPerFrame}}\ =\ \textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}((1000.f\ *\ 1000.f)\ /\ f);}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_p_s_a44921d7c5d49e473b0622701118f22d2}{Wait}}()\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ int64\_t\ sleepTime\ =\ \mbox{\hyperlink{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}{m\_MicrosecondsPerFrame}}\ -\/\ \mbox{\hyperlink{class_f_p_s_a508840c437caf9028d712515a84aa89c}{m\_deltaTime}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sleepTime\ >\ 0)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tt\ =\ sleepTime\ /\ 1000.f;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#if\ defined(DEBUG)\ |\ defined(\_DEBUG)}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}sleep\ time(ms):\ "{}\ <<\ tt\ <<\ std::endl;}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(tt)));}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}{m\_MicrosecondsPerFrame}}\ =\ 0;\ }
+\DoxyCodeLine{00066\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}{m\_currentTime}}\ =\ 0;\ }
+\DoxyCodeLine{00067\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f}{m\_lastTime}}\ =\ 0;\ }
+\DoxyCodeLine{00068\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_f_p_s_a508840c437caf9028d712515a84aa89c}{m\_deltaTime}}\ =\ 0;\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_FPS\_CONTROL\_H\_}}
+
+\end{DoxyCode}

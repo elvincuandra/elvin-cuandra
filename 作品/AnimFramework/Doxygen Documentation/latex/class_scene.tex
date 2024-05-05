@@ -1,0 +1,184 @@
+\doxysection{Scene Class Reference}
+\hypertarget{class_scene}{}\label{class_scene}\index{Scene@{Scene}}
+
+
+\doxylink{class_scene}{Scene} class.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+Inheritance diagram for Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_af44173c6837208188f6852de556a2d7b}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a870c22edff31a756b2aaab28919f9dcd}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_scene_a2f86e6ea13f0d60cafc1825943484fbc}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_scene_a985ff778b088ce97ef2d75645e191ae8}{Uninit\+Base}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_scene_ac3c4677dfd702a3ffd5ffadd3f1ac478}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_a0b0e46cd0df10a32cb7cab14b65004a9}{Update}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_a0e9ae08905919b0b983a923622dbbe21}{Draw}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_scene_aa94fb256b8a862aee810db4f1e8d56a4}{Uninit}} ()=0
+\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_ad2b9d8bab99af60799d2da6400036373}{Create\+Obj}} (const char \texorpdfstring{$\ast$}{*}obj\+Name)
+\begin{DoxyCompactList}\small\item\em Create\+Obj function~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_a82a0ac05efc05d14c979be5ed839d799}{Get\+Obj}} (const char \texorpdfstring{$\ast$}{*}obj\+Name)
+\begin{DoxyCompactList}\small\item\em Get\+Obj function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_object}{Object}} $>$ $>$ \mbox{\hyperlink{class_scene_aceb688ffa28b756667ca3c9d5f2c3b48}{m\+\_\+objects}}
+\begin{DoxyCompactList}\small\item\em This variable stores the objects in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_scene}{Scene} class. 
+
+This class is the base class for all scenes. It is responsible for the initialization, update, rendering, and termination of objects contained within the container. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_ad2b9d8bab99af60799d2da6400036373}\label{class_scene_ad2b9d8bab99af60799d2da6400036373} 
+\index{Scene@{Scene}!CreateObj@{CreateObj}}
+\index{CreateObj@{CreateObj}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CreateObj()}{CreateObj()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \texorpdfstring{$\ast$}{*} Scene\+::\+Create\+Obj (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{obj\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Create\+Obj function~\newline
+ 
+
+This function creates an object of type T and adds it to the scene. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & refers to a child class of \doxylink{class_object}{Object} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+Name} & \+: name of the object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a0e9ae08905919b0b983a923622dbbe21}\label{class_scene_a0e9ae08905919b0b983a923622dbbe21} 
+\index{Scene@{Scene}!Draw@{Draw}}
+\index{Draw@{Draw}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Scene\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_editor_a1d96ed89e1919029acc4af54f7dc999b}{Editor}}.
+
+\Hypertarget{class_scene_a2f86e6ea13f0d60cafc1825943484fbc}\label{class_scene_a2f86e6ea13f0d60cafc1825943484fbc} 
+\index{Scene@{Scene}!DrawBase@{DrawBase}}
+\index{DrawBase@{DrawBase}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{DrawBase()}{DrawBase()}}
+{\footnotesize\ttfamily void Scene\+::\+Draw\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_scene_a82a0ac05efc05d14c979be5ed839d799}\label{class_scene_a82a0ac05efc05d14c979be5ed839d799} 
+\index{Scene@{Scene}!GetObj@{GetObj}}
+\index{GetObj@{GetObj}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetObj()}{GetObj()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \texorpdfstring{$\ast$}{*} Scene\+::\+Get\+Obj (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{obj\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get\+Obj function~\newline
+ 
+
+This function returns an object of type T from the existing m\+\_\+objects map container. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & refers to a child class of \doxylink{class_object}{Object} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+Name} & \+: name of the object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_ac3c4677dfd702a3ffd5ffadd3f1ac478}\label{class_scene_ac3c4677dfd702a3ffd5ffadd3f1ac478} 
+\index{Scene@{Scene}!Init@{Init}}
+\index{Init@{Init}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void Scene\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_editor_acd45563494425039e7d9f68a6dfa1728}{Editor}}.
+
+\Hypertarget{class_scene_af44173c6837208188f6852de556a2d7b}\label{class_scene_af44173c6837208188f6852de556a2d7b} 
+\index{Scene@{Scene}!InitBase@{InitBase}}
+\index{InitBase@{InitBase}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{InitBase()}{InitBase()}}
+{\footnotesize\ttfamily void Scene\+::\+Init\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_scene_aa94fb256b8a862aee810db4f1e8d56a4}\label{class_scene_aa94fb256b8a862aee810db4f1e8d56a4} 
+\index{Scene@{Scene}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily virtual void Scene\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_editor_a337204b5b8b67ce2e8252753e942c614}{Editor}}.
+
+\Hypertarget{class_scene_a985ff778b088ce97ef2d75645e191ae8}\label{class_scene_a985ff778b088ce97ef2d75645e191ae8} 
+\index{Scene@{Scene}!UninitBase@{UninitBase}}
+\index{UninitBase@{UninitBase}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{UninitBase()}{UninitBase()}}
+{\footnotesize\ttfamily void Scene\+::\+Uninit\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_scene_a0b0e46cd0df10a32cb7cab14b65004a9}\label{class_scene_a0b0e46cd0df10a32cb7cab14b65004a9} 
+\index{Scene@{Scene}!Update@{Update}}
+\index{Update@{Update}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Scene\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_editor_aa870376f1a0116d728fc2906c26ff74a}{Editor}}.
+
+\Hypertarget{class_scene_a870c22edff31a756b2aaab28919f9dcd}\label{class_scene_a870c22edff31a756b2aaab28919f9dcd} 
+\index{Scene@{Scene}!UpdateBase@{UpdateBase}}
+\index{UpdateBase@{UpdateBase}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{UpdateBase()}{UpdateBase()}}
+{\footnotesize\ttfamily void Scene\+::\+Update\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_scene_aceb688ffa28b756667ca3c9d5f2c3b48}\label{class_scene_aceb688ffa28b756667ca3c9d5f2c3b48} 
+\index{Scene@{Scene}!m\_objects@{m\_objects}}
+\index{m\_objects@{m\_objects}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{m\_objects}{m\_objects}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_object}{Object}}$>$ $>$ Scene\+::m\+\_\+objects\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the objects in the scene. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\doxysection{Graphics.\+h}
+\hypertarget{_graphics_8h_source}{}\label{_graphics_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Graphics.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Graphics.h}}
+\mbox{\hyperlink{_graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GRAPHICS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GRAPHICS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <d3d11.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <dxgi.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <wrl/client.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{structs_8h}{structs.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ comment\ (lib,\ "{}d3d11.lib"{})}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}dxgi.lib"{})}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }Microsoft::WRL::ComPtr;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graphics}{Graphics}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}{Graphics}}()\ \{\};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_graphics}{Graphics}}\&\ \mbox{\hyperlink{class_graphics_a75a3ba91b37d7ce3f67a7c68a7466e74}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_graphics}{Graphics}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_graphics_abe2f13f24a1d35c55fdac10a282744eb}{Graphics}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_graphics}{Graphics}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}{\string~Graphics}}()\ \{\};}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ HRESULT\ \mbox{\hyperlink{class_graphics_a09cef4623098bf136b4a3539fb8c25ac}{Init}}(uint32\_t\ width,\ uint32\_t\ height,\ HWND\ hWnd,\ \textcolor{keywordtype}{bool}\ vsync\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ fullscreen\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_a4e4ae3da9d4d011f1cd60e2c71b6812b}{Begin}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_a3f004cbb174ebaa0e24765d79cdc9cd2}{End}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_ae5add0a9c849c286b979ff87d023b764}{Shutdown}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11Device>\ \mbox{\hyperlink{class_graphics_a95c2f8c7014afe3df577234838b199bf}{m\_pDevice}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11DeviceContext>\ \mbox{\hyperlink{class_graphics_af1c506310d28eb96cd6ff86a5b7c7ed6}{m\_pDeviceContext}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<IDXGISwapChain>\ \mbox{\hyperlink{class_graphics_a92153cfda61cf8173cf9446aa22a4cc4}{m\_pSwapChain}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11RenderTargetView>\ \mbox{\hyperlink{class_graphics_a3481b65eab36bf7fae881c96215bf1d3}{m\_pRenderTargetView}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11DepthStencilState>\ \mbox{\hyperlink{class_graphics_a9a865857fbb2af0db0bf4d41ae25a46e}{m\_pDepthStencilState}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11DepthStencilView>\ \mbox{\hyperlink{class_graphics_a9d20be5ac8b11514de21dd3131029768}{m\_pDepthStencilView}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11RasterizerState>\ \mbox{\hyperlink{class_graphics_af56ffaaeda3f8686ad6f7f8f81195ee5}{m\_pRasterizerState}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11SamplerState>\ \mbox{\hyperlink{class_graphics_a478558a32c5066274c17c24b051df997}{m\_pSamplerState}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_graphics_aff3fa95cf830c8446c7b91c04fc2f3c8}{m\_pWorldBuffer}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_graphics_a4ddcb76ec0a7833044084fe995f7fde6}{m\_pViewBuffer}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_graphics_af6a7ff030aeaf2f29f00154df6644130}{m\_pProjBuffer}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graphics_a46183ee631094641329f68f5cc36397e}{m\_vsync}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_a61abdca656eb039d41176c37baed3e63}{m\_world}};\ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_a26fdb136d081c05d7274e9a2bdfee936}{m\_view}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_ab4418999a3f735b7dda8522ebd4f1ba8}{m\_proj}};\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#pragma\ region\ Getter}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ ID3D11Device*\ \mbox{\hyperlink{class_graphics_ae4eef661f760da55b747edb81bf1059c}{GetDevice}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graphics_a95c2f8c7014afe3df577234838b199bf}{m\_pDevice}}.Get();\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ ID3D11DeviceContext*\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{GetDeviceContext}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graphics_af1c506310d28eb96cd6ff86a5b7c7ed6}{m\_pDeviceContext}}.Get();\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_a44784fde5086f6e420a225b9900244a2}{GetWorld}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graphics_a61abdca656eb039d41176c37baed3e63}{m\_world}};\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_aa1223e5ce265a4899c07764303fd0d2b}{GetView}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graphics_a26fdb136d081c05d7274e9a2bdfee936}{m\_view}};\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{static}\ DirectX::XMFLOAT4X4\ \mbox{\hyperlink{class_graphics_a9db6637ecac1537f4dd419a9603a9462}{GetProj}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graphics_ab4418999a3f735b7dda8522ebd4f1ba8}{m\_proj}};\ \}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#pragma\ region\ Setter}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_a19871b3e831626e713341ad23b09e220}{SetWorld}}(DirectX::XMMATRIX\ world);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_ab93e0366e20bd5f3f0dcdb6fd17f3853}{SetView}}(DirectX::XMMATRIX\ view);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graphics_a20d5c68d3bd16e79d596812a5141e49f}{SetProj}}(DirectX::XMMATRIX\ proj);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GRAPHICS\_H}}
+
+\end{DoxyCode}

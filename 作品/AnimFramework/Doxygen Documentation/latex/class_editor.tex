@@ -1,0 +1,109 @@
+\doxysection{Editor Class Reference}
+\hypertarget{class_editor}{}\label{class_editor}\index{Editor@{Editor}}
+
+
+{\ttfamily \#include $<$Editor.\+h$>$}
+
+Inheritance diagram for Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_editor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_editor_acd45563494425039e7d9f68a6dfa1728}{Init}} () override
+\item 
+virtual void \mbox{\hyperlink{class_editor_aa870376f1a0116d728fc2906c26ff74a}{Update}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_editor_a1d96ed89e1919029acc4af54f7dc999b}{Draw}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_editor_a337204b5b8b67ce2e8252753e942c614}{Uninit}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_scene}{Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_af44173c6837208188f6852de556a2d7b}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_scene_a870c22edff31a756b2aaab28919f9dcd}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_scene_a2f86e6ea13f0d60cafc1825943484fbc}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_scene_a985ff778b088ce97ef2d75645e191ae8}{Uninit\+Base}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_scene}{Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_ad2b9d8bab99af60799d2da6400036373}{Create\+Obj}} (const char \texorpdfstring{$\ast$}{*}obj\+Name)
+\begin{DoxyCompactList}\small\item\em Create\+Obj function~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_a82a0ac05efc05d14c979be5ed839d799}{Get\+Obj}} (const char \texorpdfstring{$\ast$}{*}obj\+Name)
+\begin{DoxyCompactList}\small\item\em Get\+Obj function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_editor}{Editor} class This class is responsible for managing the editor. It inherits from \doxylink{class_scene}{Scene} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_editor_a1d96ed89e1919029acc4af54f7dc999b}\label{class_editor_a1d96ed89e1919029acc4af54f7dc999b} 
+\index{Editor@{Editor}!Draw@{Draw}}
+\index{Draw@{Draw}!Editor@{Editor}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Editor\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw function~\newline
+ This function is called when the editor is drawn. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_a0e9ae08905919b0b983a923622dbbe21}{Scene}}.
+
+\Hypertarget{class_editor_acd45563494425039e7d9f68a6dfa1728}\label{class_editor_acd45563494425039e7d9f68a6dfa1728} 
+\index{Editor@{Editor}!Init@{Init}}
+\index{Init@{Init}!Editor@{Editor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Editor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\doxylink{class_editor}{Editor} constructor This function initializes the editor as well as the objects created within. 
+
+Implements \mbox{\hyperlink{class_scene_ac3c4677dfd702a3ffd5ffadd3f1ac478}{Scene}}.
+
+\Hypertarget{class_editor_a337204b5b8b67ce2e8252753e942c614}\label{class_editor_a337204b5b8b67ce2e8252753e942c614} 
+\index{Editor@{Editor}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Editor@{Editor}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Editor\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Uninit function~\newline
+ This function is called when the editor is terminated. 
+
+Implements \mbox{\hyperlink{class_scene_aa94fb256b8a862aee810db4f1e8d56a4}{Scene}}.
+
+\Hypertarget{class_editor_aa870376f1a0116d728fc2906c26ff74a}\label{class_editor_aa870376f1a0116d728fc2906c26ff74a} 
+\index{Editor@{Editor}!Update@{Update}}
+\index{Update@{Update}!Editor@{Editor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Editor\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update function~\newline
+ This function is called when the editor is updated. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_a0b0e46cd0df10a32cb7cab14b65004a9}{Scene}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_editor_8h}{Editor.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_editor_8cpp}{Editor.\+cpp}}\end{DoxyCompactItemize}

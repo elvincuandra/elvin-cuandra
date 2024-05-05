@@ -1,0 +1,209 @@
+\doxysection{CBMaterial Class Reference}
+\hypertarget{class_c_b_material}{}\label{class_c_b_material}\index{CBMaterial@{CBMaterial}}
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material}{CBuffer\+Material}}
+\begin{DoxyCompactList}\small\item\em Constant buffer struct for material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_b_material_a9430c7365a12362799f3c19a4193025e}{Init}} (\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} mtl)
+\begin{DoxyCompactList}\small\item\em Init function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_b_material_a0d432c4db212effe3f89182bb2918140}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_b_material_a6021bf070c036a405df4b2cea572c43f}{Set\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em Set\+GPU function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_b_material_a3237a01b6df0e08a301c032f9b061299}{Set\+Material}} (const \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \&mtl)
+\begin{DoxyCompactList}\small\item\em Set\+Material function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_b_material_a613bacfb61a0c40f78304925dd829675}{Uninit}} ()
+\item 
+void \mbox{\hyperlink{class_c_b_material_ad1ddab63ca06d3e9c99205c5a4fa9bed}{Set\+Diffuse}} (Direct\+X\+::\+XMFLOAT4 diffuse)
+\item 
+void \mbox{\hyperlink{class_c_b_material_ab75322c9c3892e7987f2b51be7cfd843}{Set\+Ambient}} (Direct\+X\+::\+XMFLOAT4 ambient)
+\item 
+void \mbox{\hyperlink{class_c_b_material_ab660005e18e48320e27e2946d6b73377}{Set\+Specular}} (Direct\+X\+::\+XMFLOAT4 specular)
+\item 
+void \mbox{\hyperlink{class_c_b_material_a2de2d46a155da398011bcd9f8969af5d}{Set\+Emission}} (Direct\+X\+::\+XMFLOAT4 emission)
+\item 
+void \mbox{\hyperlink{class_c_b_material_a7100319adaddd358f0bd4c4eb0fec342}{Set\+Shininess}} (float shininess)
+\item 
+\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \mbox{\hyperlink{class_c_b_material_aca1d1e674d477fa04aa7f1cc851df723}{Get\+Material}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Material function~\newline
+ \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_c_b_material_a11912bf4b02741b856af055de15fe664}{Get\+Constant\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Constant\+Buffer function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\+\_\+\+Material}}
+\begin{DoxyCompactList}\small\item\em This variable stores the material data. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\+\_\+p\+Constant\+Buffer\+Material}}
+\begin{DoxyCompactList}\small\item\em This variable stores the constant buffer for material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_b_material_a11912bf4b02741b856af055de15fe664}\label{class_c_b_material_a11912bf4b02741b856af055de15fe664} 
+\index{CBMaterial@{CBMaterial}!GetConstantBuffer@{GetConstantBuffer}}
+\index{GetConstantBuffer@{GetConstantBuffer}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{GetConstantBuffer()}{GetConstantBuffer()}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ CBMaterial\+::\+Get\+Constant\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Constant\+Buffer function~\newline
+ 
+
+This function returns the constant buffer for material. \begin{DoxyReturn}{Returns}
+ID3\+D11\+Buffer\texorpdfstring{$\ast$}{*} \+: pointer to the constant buffer for material 
+\end{DoxyReturn}
+\Hypertarget{class_c_b_material_aca1d1e674d477fa04aa7f1cc851df723}\label{class_c_b_material_aca1d1e674d477fa04aa7f1cc851df723} 
+\index{CBMaterial@{CBMaterial}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{GetMaterial()}{GetMaterial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} CBMaterial\+::\+Get\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Material function~\newline
+ 
+
+This function returns the material data. \begin{DoxyReturn}{Returns}
+\doxylink{struct_m_a_t_e_r_i_a_l}{MATERIAL} \+: material data 
+\end{DoxyReturn}
+\Hypertarget{class_c_b_material_a9430c7365a12362799f3c19a4193025e}\label{class_c_b_material_a9430c7365a12362799f3c19a4193025e} 
+\index{CBMaterial@{CBMaterial}!Init@{Init}}
+\index{Init@{Init}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool CBMaterial\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}}]{mtl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Init function~\newline
+ 
+
+This function initializes the constant buffer for material. 
+\begin{DoxyParams}{Parameters}
+{\em mtl} & \+: material data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool \+: returns true if successful 
+\end{DoxyReturn}
+\Hypertarget{class_c_b_material_ab75322c9c3892e7987f2b51be7cfd843}\label{class_c_b_material_ab75322c9c3892e7987f2b51be7cfd843} 
+\index{CBMaterial@{CBMaterial}!SetAmbient@{SetAmbient}}
+\index{SetAmbient@{SetAmbient}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetAmbient()}{SetAmbient()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Ambient (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{ambient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Ambient function~\newline
+ This function sets the ambient color of the material. \Hypertarget{class_c_b_material_ad1ddab63ca06d3e9c99205c5a4fa9bed}\label{class_c_b_material_ad1ddab63ca06d3e9c99205c5a4fa9bed} 
+\index{CBMaterial@{CBMaterial}!SetDiffuse@{SetDiffuse}}
+\index{SetDiffuse@{SetDiffuse}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetDiffuse()}{SetDiffuse()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Diffuse (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{diffuse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Diffuse function~\newline
+ This function sets the diffuse color of the material. \Hypertarget{class_c_b_material_a2de2d46a155da398011bcd9f8969af5d}\label{class_c_b_material_a2de2d46a155da398011bcd9f8969af5d} 
+\index{CBMaterial@{CBMaterial}!SetEmission@{SetEmission}}
+\index{SetEmission@{SetEmission}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetEmission()}{SetEmission()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Emission (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{emission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Emission function~\newline
+ This function sets the emission color of the material. \Hypertarget{class_c_b_material_a6021bf070c036a405df4b2cea572c43f}\label{class_c_b_material_a6021bf070c036a405df4b2cea572c43f} 
+\index{CBMaterial@{CBMaterial}!SetGPU@{SetGPU}}
+\index{SetGPU@{SetGPU}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetGPU()}{SetGPU()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set\+GPU function~\newline
+ 
+
+Set the constant buffer to a slot \Hypertarget{class_c_b_material_a3237a01b6df0e08a301c032f9b061299}\label{class_c_b_material_a3237a01b6df0e08a301c032f9b061299} 
+\index{CBMaterial@{CBMaterial}!SetMaterial@{SetMaterial}}
+\index{SetMaterial@{SetMaterial}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetMaterial()}{SetMaterial()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} \&}]{mtl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set\+Material function~\newline
+ 
+
+This function sets the material data and updates the constant buffer for material. 
+\begin{DoxyParams}{Parameters}
+{\em mtl} & \+: material data \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_b_material_a7100319adaddd358f0bd4c4eb0fec342}\label{class_c_b_material_a7100319adaddd358f0bd4c4eb0fec342} 
+\index{CBMaterial@{CBMaterial}!SetShininess@{SetShininess}}
+\index{SetShininess@{SetShininess}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetShininess()}{SetShininess()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Shininess (\begin{DoxyParamCaption}\item[{float}]{shininess }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Shininess function~\newline
+ This function sets the shininess of the material. \Hypertarget{class_c_b_material_ab660005e18e48320e27e2946d6b73377}\label{class_c_b_material_ab660005e18e48320e27e2946d6b73377} 
+\index{CBMaterial@{CBMaterial}!SetSpecular@{SetSpecular}}
+\index{SetSpecular@{SetSpecular}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{SetSpecular()}{SetSpecular()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Set\+Specular (\begin{DoxyParamCaption}\item[{Direct\+X\+::\+XMFLOAT4}]{specular }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set\+Specular function~\newline
+ This function sets the specular color of the material. \Hypertarget{class_c_b_material_a613bacfb61a0c40f78304925dd829675}\label{class_c_b_material_a613bacfb61a0c40f78304925dd829675} 
+\index{CBMaterial@{CBMaterial}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Uninit function~\newline
+ This function releases the constant buffer for material. \Hypertarget{class_c_b_material_a0d432c4db212effe3f89182bb2918140}\label{class_c_b_material_a0d432c4db212effe3f89182bb2918140} 
+\index{CBMaterial@{CBMaterial}!Update@{Update}}
+\index{Update@{Update}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void CBMaterial\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update function~\newline
+ 
+
+This function updates the constant buffer for material and sets it to a constant buffer slot. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}\label{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8} 
+\index{CBMaterial@{CBMaterial}!m\_Material@{m\_Material}}
+\index{m\_Material@{m\_Material}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{m\_Material}{m\_Material}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} CBMaterial\+::m\+\_\+\+Material}
+
+
+
+This variable stores the material data. 
+
+\Hypertarget{class_c_b_material_a596c455c9e1162b1397d031961308460}\label{class_c_b_material_a596c455c9e1162b1397d031961308460} 
+\index{CBMaterial@{CBMaterial}!m\_pConstantBufferMaterial@{m\_pConstantBufferMaterial}}
+\index{m\_pConstantBufferMaterial@{m\_pConstantBufferMaterial}!CBMaterial@{CBMaterial}}
+\doxysubsubsection{\texorpdfstring{m\_pConstantBufferMaterial}{m\_pConstantBufferMaterial}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Buffer$>$ CBMaterial\+::m\+\_\+p\+Constant\+Buffer\+Material}
+
+
+
+This variable stores the constant buffer for material. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_material_8h}{Material.\+h}}\end{DoxyCompactItemize}
