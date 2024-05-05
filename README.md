@@ -1,5 +1,5 @@
 # このレポジトリについて
-AnimFramework(就職作品)の実行環境、ソースコード、ポートフォリオをダウンロードできるようにしてあります。お手数ですが、ダウンロードしてご確認いただけると幸いです。 
+AnimFramework(就職作品)の実行環境、ソースコード、ドキュメンテーション、ポートフォリオをダウンロードできるようにしてあります。お手数ですが、ダウンロードしてご確認いただけると幸いです。 
 
 ### AnimFramework (C++/ DirectX11)
 > ![Desktop 2024 04 27 - 00 35 14 02 (online-video-cutter com)](https://github.com/elvincuandra/elvin-cuandra/assets/108105408/989afd9b-97ab-48d5-be6b-ce7636aa8537)
