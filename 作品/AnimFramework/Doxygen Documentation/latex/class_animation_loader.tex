@@ -1,0 +1,87 @@
+\doxysection{Animation\+Loader Class Reference}
+\hypertarget{class_animation_loader}{}\label{class_animation_loader}\index{AnimationLoader@{AnimationLoader}}
+
+
+\doxylink{class_animation_loader}{Animation\+Loader} class.  
+
+
+
+
+{\ttfamily \#include $<$Animation\+Loader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_animation_loader_a50cc97631d5f81ac703b0630b1aaf904}{Load\+Animation}} (const std\+::string file\+Name, const std\+::string name)
+\item 
+ai\+Animation \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_animation_loader_a982bf28798b70c50dd7dd42548c2b612}{Get\+Animation}} (const char \texorpdfstring{$\ast$}{*}name, int idx)
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, const ai\+Scene \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_animation_loader_a00604f899d9f6f93c923b5cd33ba1027}{Get\+Animation\+Container}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, const ai\+Scene \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_animation_loader_a4f375315dab2d3d25137dca57469e893}{m\+\_\+\+Animation\+Container}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_animation_loader}{Animation\+Loader} class. 
+
+This class is responsible for loading animation data from file and storing it in a container. It uses Assimp library to load animation data from file. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_loader_a982bf28798b70c50dd7dd42548c2b612}\label{class_animation_loader_a982bf28798b70c50dd7dd42548c2b612} 
+\index{AnimationLoader@{AnimationLoader}!GetAnimation@{GetAnimation}}
+\index{GetAnimation@{GetAnimation}!AnimationLoader@{AnimationLoader}}
+\doxysubsubsection{\texorpdfstring{GetAnimation()}{GetAnimation()}}
+{\footnotesize\ttfamily ai\+Animation \texorpdfstring{$\ast$}{*} Animation\+Loader\+::\+Get\+Animation (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name,  }\item[{int}]{idx }\end{DoxyParamCaption})}
+
+Get\+Animation function This function returns a pointer to the animation data. 
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: name of the animation data (key for m\+\_\+\+Animation\+Container to use) \\
+\hline
+{\em idx} & \+: index of the animation data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the animation data 
+\end{DoxyReturn}
+\Hypertarget{class_animation_loader_a00604f899d9f6f93c923b5cd33ba1027}\label{class_animation_loader_a00604f899d9f6f93c923b5cd33ba1027} 
+\index{AnimationLoader@{AnimationLoader}!GetAnimationContainer@{GetAnimationContainer}}
+\index{GetAnimationContainer@{GetAnimationContainer}!AnimationLoader@{AnimationLoader}}
+\doxysubsubsection{\texorpdfstring{GetAnimationContainer()}{GetAnimationContainer()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, const ai\+Scene \texorpdfstring{$\ast$}{*} $>$ Animation\+Loader\+::\+Get\+Animation\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get\+Animation\+Container function This function returns the animation data container. \begin{DoxyReturn}{Returns}
+m\+\_\+\+Animation\+Container 
+\end{DoxyReturn}
+\Hypertarget{class_animation_loader_a50cc97631d5f81ac703b0630b1aaf904}\label{class_animation_loader_a50cc97631d5f81ac703b0630b1aaf904} 
+\index{AnimationLoader@{AnimationLoader}!LoadAnimation@{LoadAnimation}}
+\index{LoadAnimation@{LoadAnimation}!AnimationLoader@{AnimationLoader}}
+\doxysubsubsection{\texorpdfstring{LoadAnimation()}{LoadAnimation()}}
+{\footnotesize\ttfamily void Animation\+Loader\+::\+Load\+Animation (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+Name,  }\item[{const std\+::string}]{name }\end{DoxyParamCaption})}
+
+Load\+Animation function This function loads animation data from file and stores it in a container. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \+: file name of the animation data \\
+\hline
+{\em name} & \+: name of the animation data (user -\/ declared) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_animation_loader_a4f375315dab2d3d25137dca57469e893}\label{class_animation_loader_a4f375315dab2d3d25137dca57469e893} 
+\index{AnimationLoader@{AnimationLoader}!m\_AnimationContainer@{m\_AnimationContainer}}
+\index{m\_AnimationContainer@{m\_AnimationContainer}!AnimationLoader@{AnimationLoader}}
+\doxysubsubsection{\texorpdfstring{m\_AnimationContainer}{m\_AnimationContainer}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, const ai\+Scene\texorpdfstring{$\ast$}{*}$>$ Animation\+Loader\+::m\+\_\+\+Animation\+Container\hspace{0.3cm}{\ttfamily [private]}}
+
+m\+\_\+\+Animation\+Container~\newline
+ This container stores animation data. The key is the name of the animation data and the value is the pointer to the animation data 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_animation_loader_8h}{Animation\+Loader.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_animation_loader_8cpp}{Animation\+Loader.\+cpp}}\end{DoxyCompactItemize}

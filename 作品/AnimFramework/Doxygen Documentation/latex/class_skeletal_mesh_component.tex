@@ -1,0 +1,234 @@
+\doxysection{Skeletal\+Mesh\+Component Class Reference}
+\hypertarget{class_skeletal_mesh_component}{}\label{class_skeletal_mesh_component}\index{SkeletalMeshComponent@{SkeletalMeshComponent}}
+
+
+{\ttfamily \#include $<$Skeletal\+Mesh\+Component.\+h$>$}
+
+Inheritance diagram for Skeletal\+Mesh\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_skeletal_mesh_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_skeletal_mesh_component_a1d6827ee02f3d9b91f6862475440fcbe}{Load\+Model}} (std\+::string file\+Name)
+\item 
+void \mbox{\hyperlink{class_skeletal_mesh_component_af0791a249ad7bd59ef87ba37078ec29f}{Load\+Animation}} (std\+::string file\+Name, std\+::string name)
+\item 
+void \mbox{\hyperlink{class_skeletal_mesh_component_a0fa749e3d559bc82f8b198fec4053cd1}{Play\+Animation\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Open Im\+Gui window to play animation \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_loader}{Model\+Loader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_skeletal_mesh_component_a7e86ff27d3b7693c9ea9755ecc063846}{Get\+Model}} () const
+\item 
+\mbox{\hyperlink{class_model_renderer}{Model\+Renderer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_skeletal_mesh_component_aa69bf0252eabab4da91b8646bec77d44}{Get\+Renderer}} () const
+\item 
+\mbox{\hyperlink{class_animation_loader}{Animation\+Loader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_skeletal_mesh_component_a0400f4e45660215ae5627da046e2ee0f}{Get\+Animation}} () const
+\item 
+\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_skeletal_mesh_component_ac9766d12fb595013130096b9d9548385}{Get\+Shader}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_component_aed37c69469e2109d0a35235367dab687}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_component_ab34642e3b1dca0a75e40cc38ed5c88aa}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_component_abf94b17a1ac4a03bb0260cde1370979e}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_component_a4cfb704d496cd914635a84c5c026bf40}{Uninit\+Base}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_skeletal_mesh_component_a9aa1e663684e9d1dd2a88d1bdb7674f9}{Init}} () override
+\item 
+virtual void \mbox{\hyperlink{class_skeletal_mesh_component_a5df94ef88134a61ed0d36ae6bc73b326}{Update}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_skeletal_mesh_component_ac7639530a4080d029bcc71f80426aff0}{Draw}} (uint64\+\_\+t delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_skeletal_mesh_component_a526ecc03738cec9ee71a4729566081c7}{Uninit}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_skeletal_mesh_component_a87f0b32b95dc74796fdddc9e10911f47}{Frame\+Checker}} (int \&frame\+Num)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_model_loader}{Model\+Loader}} $>$ \mbox{\hyperlink{class_skeletal_mesh_component_a423091fd57f921c71d2cb7d1aeffd667}{m\+\_\+p\+Model}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_model_renderer}{Model\+Renderer}} $>$ \mbox{\hyperlink{class_skeletal_mesh_component_a53ed18686885fcf5a20a860733721c8c}{m\+\_\+p\+Renderer}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_animation_loader}{Animation\+Loader}} $>$ \mbox{\hyperlink{class_skeletal_mesh_component_a751fa1dde2ce472f46c5f38ecf43fa11}{m\+\_\+p\+Animation}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_shader}{Shader}} $>$ \mbox{\hyperlink{class_skeletal_mesh_component_ada6ef5e0fc442d4e51372bab19695b08}{m\+\_\+p\+Shader}}
+\item 
+std\+::string \mbox{\hyperlink{class_skeletal_mesh_component_ac88a4936b11b22b868641d931179582c}{m\+\_\+\+Anim\+Name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_skeletal_mesh_component_a03bd0eb2ef6c6fbb8f4fd9f53e3c7298}{m\+\_\+frame}} = 0
+\item 
+static bool \mbox{\hyperlink{class_skeletal_mesh_component_acc756d8348017df828aef1c9ce0c8e26}{m\+\_\+is\+Playing}} = false
+\item 
+static float \mbox{\hyperlink{class_skeletal_mesh_component_aa8d88b5c98cd19121a279c71b6f9d970}{m\+\_\+total\+Frame\+Time}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_skeletal_mesh_component_ac7639530a4080d029bcc71f80426aff0}\label{class_skeletal_mesh_component_ac7639530a4080d029bcc71f80426aff0} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Draw function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is drawn. 
+
+Implements \mbox{\hyperlink{class_component_a2e546abb3e316740939bb57c03369e37}{Component}}.
+
+\Hypertarget{class_skeletal_mesh_component_a87f0b32b95dc74796fdddc9e10911f47}\label{class_skeletal_mesh_component_a87f0b32b95dc74796fdddc9e10911f47} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!FrameChecker@{FrameChecker}}
+\index{FrameChecker@{FrameChecker}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{FrameChecker()}{FrameChecker()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Frame\+Checker (\begin{DoxyParamCaption}\item[{int \&}]{frame\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_a0400f4e45660215ae5627da046e2ee0f}\label{class_skeletal_mesh_component_a0400f4e45660215ae5627da046e2ee0f} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!GetAnimation@{GetAnimation}}
+\index{GetAnimation@{GetAnimation}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{GetAnimation()}{GetAnimation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_animation_loader}{Animation\+Loader}} \texorpdfstring{$\ast$}{*} Skeletal\+Mesh\+Component\+::\+Get\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_skeletal_mesh_component_a7e86ff27d3b7693c9ea9755ecc063846}\label{class_skeletal_mesh_component_a7e86ff27d3b7693c9ea9755ecc063846} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!GetModel@{GetModel}}
+\index{GetModel@{GetModel}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{GetModel()}{GetModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_loader}{Model\+Loader}} \texorpdfstring{$\ast$}{*} Skeletal\+Mesh\+Component\+::\+Get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_skeletal_mesh_component_aa69bf0252eabab4da91b8646bec77d44}\label{class_skeletal_mesh_component_aa69bf0252eabab4da91b8646bec77d44} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_renderer}{Model\+Renderer}} \texorpdfstring{$\ast$}{*} Skeletal\+Mesh\+Component\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_skeletal_mesh_component_ac9766d12fb595013130096b9d9548385}\label{class_skeletal_mesh_component_ac9766d12fb595013130096b9d9548385} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!GetShader@{GetShader}}
+\index{GetShader@{GetShader}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{GetShader()}{GetShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*} Skeletal\+Mesh\+Component\+::\+Get\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_skeletal_mesh_component_a9aa1e663684e9d1dd2a88d1bdb7674f9}\label{class_skeletal_mesh_component_a9aa1e663684e9d1dd2a88d1bdb7674f9} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!Init@{Init}}
+\index{Init@{Init}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Init function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is initialized. 
+
+Implements \mbox{\hyperlink{class_component_a0bb954fe977d71269e2db01bc8a77e95}{Component}}.
+
+\Hypertarget{class_skeletal_mesh_component_af0791a249ad7bd59ef87ba37078ec29f}\label{class_skeletal_mesh_component_af0791a249ad7bd59ef87ba37078ec29f} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!LoadAnimation@{LoadAnimation}}
+\index{LoadAnimation@{LoadAnimation}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{LoadAnimation()}{LoadAnimation()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Load\+Animation (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_skeletal_mesh_component_a1d6827ee02f3d9b91f6862475440fcbe}\label{class_skeletal_mesh_component_a1d6827ee02f3d9b91f6862475440fcbe} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!LoadModel@{LoadModel}}
+\index{LoadModel@{LoadModel}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{LoadModel()}{LoadModel()}}
+{\footnotesize\ttfamily bool Skeletal\+Mesh\+Component\+::\+Load\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_skeletal_mesh_component_a0fa749e3d559bc82f8b198fec4053cd1}\label{class_skeletal_mesh_component_a0fa749e3d559bc82f8b198fec4053cd1} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!PlayAnimationWindow@{PlayAnimationWindow}}
+\index{PlayAnimationWindow@{PlayAnimationWindow}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{PlayAnimationWindow()}{PlayAnimationWindow()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Play\+Animation\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\texorpdfstring{$<$}{<} Open Im\+Gui window to play animation 
+
+\Hypertarget{class_skeletal_mesh_component_a526ecc03738cec9ee71a4729566081c7}\label{class_skeletal_mesh_component_a526ecc03738cec9ee71a4729566081c7} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Uninit function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is terminated. 
+
+Implements \mbox{\hyperlink{class_component_aa823c6a4ce46d3ae5242910325e397a6}{Component}}.
+
+\Hypertarget{class_skeletal_mesh_component_a5df94ef88134a61ed0d36ae6bc73b326}\label{class_skeletal_mesh_component_a5df94ef88134a61ed0d36ae6bc73b326} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!Update@{Update}}
+\index{Update@{Update}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Skeletal\+Mesh\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Update function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is updated. 
+
+Implements \mbox{\hyperlink{class_component_a1eaa03e0fdda87936e2c29ce620f6f60}{Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_skeletal_mesh_component_ac88a4936b11b22b868641d931179582c}\label{class_skeletal_mesh_component_ac88a4936b11b22b868641d931179582c} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_AnimName@{m\_AnimName}}
+\index{m\_AnimName@{m\_AnimName}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_AnimName}{m\_AnimName}}
+{\footnotesize\ttfamily std\+::string Skeletal\+Mesh\+Component\+::m\+\_\+\+Anim\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_a03bd0eb2ef6c6fbb8f4fd9f53e3c7298}\label{class_skeletal_mesh_component_a03bd0eb2ef6c6fbb8f4fd9f53e3c7298} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_frame@{m\_frame}}
+\index{m\_frame@{m\_frame}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_frame}{m\_frame}}
+{\footnotesize\ttfamily int Skeletal\+Mesh\+Component\+::m\+\_\+frame = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_acc756d8348017df828aef1c9ce0c8e26}\label{class_skeletal_mesh_component_acc756d8348017df828aef1c9ce0c8e26} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_isPlaying@{m\_isPlaying}}
+\index{m\_isPlaying@{m\_isPlaying}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_isPlaying}{m\_isPlaying}}
+{\footnotesize\ttfamily bool Skeletal\+Mesh\+Component\+::m\+\_\+is\+Playing = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_a751fa1dde2ce472f46c5f38ecf43fa11}\label{class_skeletal_mesh_component_a751fa1dde2ce472f46c5f38ecf43fa11} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_pAnimation@{m\_pAnimation}}
+\index{m\_pAnimation@{m\_pAnimation}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_pAnimation}{m\_pAnimation}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_animation_loader}{Animation\+Loader}}$>$ Skeletal\+Mesh\+Component\+::m\+\_\+p\+Animation\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_a423091fd57f921c71d2cb7d1aeffd667}\label{class_skeletal_mesh_component_a423091fd57f921c71d2cb7d1aeffd667} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_pModel@{m\_pModel}}
+\index{m\_pModel@{m\_pModel}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_pModel}{m\_pModel}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_model_loader}{Model\+Loader}}$>$ Skeletal\+Mesh\+Component\+::m\+\_\+p\+Model\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_a53ed18686885fcf5a20a860733721c8c}\label{class_skeletal_mesh_component_a53ed18686885fcf5a20a860733721c8c} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_pRenderer@{m\_pRenderer}}
+\index{m\_pRenderer@{m\_pRenderer}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_pRenderer}{m\_pRenderer}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_model_renderer}{Model\+Renderer}}$>$ Skeletal\+Mesh\+Component\+::m\+\_\+p\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_ada6ef5e0fc442d4e51372bab19695b08}\label{class_skeletal_mesh_component_ada6ef5e0fc442d4e51372bab19695b08} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_pShader@{m\_pShader}}
+\index{m\_pShader@{m\_pShader}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_pShader}{m\_pShader}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_shader}{Shader}}$>$ Skeletal\+Mesh\+Component\+::m\+\_\+p\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_skeletal_mesh_component_aa8d88b5c98cd19121a279c71b6f9d970}\label{class_skeletal_mesh_component_aa8d88b5c98cd19121a279c71b6f9d970} 
+\index{SkeletalMeshComponent@{SkeletalMeshComponent}!m\_totalFrameTime@{m\_totalFrameTime}}
+\index{m\_totalFrameTime@{m\_totalFrameTime}!SkeletalMeshComponent@{SkeletalMeshComponent}}
+\doxysubsubsection{\texorpdfstring{m\_totalFrameTime}{m\_totalFrameTime}}
+{\footnotesize\ttfamily float Skeletal\+Mesh\+Component\+::m\+\_\+total\+Frame\+Time = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_skeletal_mesh_component_8h}{Skeletal\+Mesh\+Component.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_skeletal_mesh_component_8cpp}{Skeletal\+Mesh\+Component.\+cpp}}\end{DoxyCompactItemize}

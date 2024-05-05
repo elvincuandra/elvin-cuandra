@@ -1,0 +1,197 @@
+\doxysection{App Class Reference}
+\hypertarget{class_app}{}\label{class_app}\index{App@{App}}
+
+
+\doxylink{class_app}{App} class.  
+
+
+
+
+{\ttfamily \#include $<$App.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_a24380c5fef2cc1bf2a0dd24378cdc186}{App}} (uint32\+\_\+t width, uint32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_app}{App} constructor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_app}{App}} \& \mbox{\hyperlink{class_app_aae28ff1fccbc107a97d07df4b9ebf4e8}{operator=}} (const \mbox{\hyperlink{class_app}{App}} \&)=delete
+\item 
+\mbox{\hyperlink{class_app_a785d7f73d7bf4c6192af473b0caa8074}{App}} (const \mbox{\hyperlink{class_app}{App}} \&)=delete
+\item 
+\mbox{\hyperlink{class_app_a34f1f253b1cef5f4ecbac66eaf6964ec}{\texorpdfstring{$\sim$}{\string~}\+App}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_app}{App} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_a78d24016da98422fabb55b10dbfe3d72}{Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_app_ad268a07d136e125537652b48e7b1746e}{Init\+Wnd}} ()
+\item 
+void \mbox{\hyperlink{class_app_ac1653107ab77e0bc8855d08ce29eb350}{Term\+Wnd}} ()
+\item 
+bool \mbox{\hyperlink{class_app_af68ba5187a53300db25549c0aa99586f}{Init\+App}} ()
+\item 
+void \mbox{\hyperlink{class_app_a5909edaacb7aa751f7828d195211f930}{Term\+App}} ()
+\item 
+void \mbox{\hyperlink{class_app_a4e97c888a1e5309bb698731ecefbc470}{Main\+Loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static LRESULT CALLBACK \mbox{\hyperlink{class_app_ad1ff298cc692f25bc64183e5da804708}{Wnd\+Proc}} (HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_app_af74d21c1c9b3d201be6f9d271cd4395b}{m\+\_\+width}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_app_adfaa9b98a4e7d066e197316785a492be}{m\+\_\+height}}
+\item 
+HWND \mbox{\hyperlink{class_app_a43e9dcb9a6a49cea143715062ddf3727}{m\+\_\+h\+Wnd}}
+\item 
+HINSTANCE \mbox{\hyperlink{class_app_a2954f584db43b6bd3513aa1f8282834e}{m\+\_\+h\+Inst}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_app}{App} class. 
+
+This class is responsible for initializing and terminating the application. It also contains the main loop of the application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_a24380c5fef2cc1bf2a0dd24378cdc186}\label{class_app_a24380c5fef2cc1bf2a0dd24378cdc186} 
+\index{App@{App}!App@{App}}
+\index{App@{App}!App@{App}}
+\doxysubsubsection{\texorpdfstring{App()}{App()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily App\+::\+App (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_app}{App} constructor. 
+
+This constructor initializes the width and height of the application window. 
+\begin{DoxyParams}{Parameters}
+{\em width} & \+: width of the application window \\
+\hline
+{\em height} & \+: height of the application window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_app_a785d7f73d7bf4c6192af473b0caa8074}\label{class_app_a785d7f73d7bf4c6192af473b0caa8074} 
+\index{App@{App}!App@{App}}
+\index{App@{App}!App@{App}}
+\doxysubsubsection{\texorpdfstring{App()}{App()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily App\+::\+App (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_app}{App}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+copy constructor~\newline
+ This constructor is deleted to prevent copy of the \doxylink{class_app}{App} class. \Hypertarget{class_app_a34f1f253b1cef5f4ecbac66eaf6964ec}\label{class_app_a34f1f253b1cef5f4ecbac66eaf6964ec} 
+\index{App@{App}!````~App@{\texorpdfstring{$\sim$}{\string~}App}}
+\index{````~App@{\texorpdfstring{$\sim$}{\string~}App}!App@{App}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}App()}{\string~App()}}
+{\footnotesize\ttfamily App\+::\texorpdfstring{$\sim$}{\string~}\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_app}{App} destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_af68ba5187a53300db25549c0aa99586f}\label{class_app_af68ba5187a53300db25549c0aa99586f} 
+\index{App@{App}!InitApp@{InitApp}}
+\index{InitApp@{InitApp}!App@{App}}
+\doxysubsubsection{\texorpdfstring{InitApp()}{InitApp()}}
+{\footnotesize\ttfamily bool App\+::\+Init\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Init\+App function~\newline
+ This function is called when the application is initialized. \begin{DoxyReturn}{Returns}
+true if the application is initialized successfully, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_app_ad268a07d136e125537652b48e7b1746e}\label{class_app_ad268a07d136e125537652b48e7b1746e} 
+\index{App@{App}!InitWnd@{InitWnd}}
+\index{InitWnd@{InitWnd}!App@{App}}
+\doxysubsubsection{\texorpdfstring{InitWnd()}{InitWnd()}}
+{\footnotesize\ttfamily bool App\+::\+Init\+Wnd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Init\+Wnd function~\newline
+ This function is called when the application window is initialized. \begin{DoxyReturn}{Returns}
+true if the application window is initialized successfully, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_app_a4e97c888a1e5309bb698731ecefbc470}\label{class_app_a4e97c888a1e5309bb698731ecefbc470} 
+\index{App@{App}!MainLoop@{MainLoop}}
+\index{MainLoop@{MainLoop}!App@{App}}
+\doxysubsubsection{\texorpdfstring{MainLoop()}{MainLoop()}}
+{\footnotesize\ttfamily void App\+::\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Main\+Loop function~\newline
+ This function is the main loop of the application. \Hypertarget{class_app_aae28ff1fccbc107a97d07df4b9ebf4e8}\label{class_app_aae28ff1fccbc107a97d07df4b9ebf4e8} 
+\index{App@{App}!operator=@{operator=}}
+\index{operator=@{operator=}!App@{App}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_app}{App}} \& App\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_app}{App}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+assignment operator~\newline
+ This operator is deleted to prevent assignment of the \doxylink{class_app}{App} class. \Hypertarget{class_app_a78d24016da98422fabb55b10dbfe3d72}\label{class_app_a78d24016da98422fabb55b10dbfe3d72} 
+\index{App@{App}!Run@{Run}}
+\index{Run@{Run}!App@{App}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void App\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Run function~\newline
+ This function initializes the application window and the application itself, runs the main loop of the application, and terminates the application. \Hypertarget{class_app_a5909edaacb7aa751f7828d195211f930}\label{class_app_a5909edaacb7aa751f7828d195211f930} 
+\index{App@{App}!TermApp@{TermApp}}
+\index{TermApp@{TermApp}!App@{App}}
+\doxysubsubsection{\texorpdfstring{TermApp()}{TermApp()}}
+{\footnotesize\ttfamily void App\+::\+Term\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Term\+App function~\newline
+ This function is called when the application is terminated. \Hypertarget{class_app_ac1653107ab77e0bc8855d08ce29eb350}\label{class_app_ac1653107ab77e0bc8855d08ce29eb350} 
+\index{App@{App}!TermWnd@{TermWnd}}
+\index{TermWnd@{TermWnd}!App@{App}}
+\doxysubsubsection{\texorpdfstring{TermWnd()}{TermWnd()}}
+{\footnotesize\ttfamily void App\+::\+Term\+Wnd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Term\+Wnd function~\newline
+ This function is called when the application window is terminated. \Hypertarget{class_app_ad1ff298cc692f25bc64183e5da804708}\label{class_app_ad1ff298cc692f25bc64183e5da804708} 
+\index{App@{App}!WndProc@{WndProc}}
+\index{WndProc@{WndProc}!App@{App}}
+\doxysubsubsection{\texorpdfstring{WndProc()}{WndProc()}}
+{\footnotesize\ttfamily LRESULT App\+::\+Wnd\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{hwnd,  }\item[{UINT}]{msg,  }\item[{WPARAM}]{wparam,  }\item[{LPARAM}]{lparam }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Wnd\+Proc function~\newline
+ This function is the callback function for the application window. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_app_adfaa9b98a4e7d066e197316785a492be}\label{class_app_adfaa9b98a4e7d066e197316785a492be} 
+\index{App@{App}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!App@{App}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily uint32\+\_\+t App\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+m\+\_\+height~\newline
+ height of the application window \Hypertarget{class_app_a2954f584db43b6bd3513aa1f8282834e}\label{class_app_a2954f584db43b6bd3513aa1f8282834e} 
+\index{App@{App}!m\_hInst@{m\_hInst}}
+\index{m\_hInst@{m\_hInst}!App@{App}}
+\doxysubsubsection{\texorpdfstring{m\_hInst}{m\_hInst}}
+{\footnotesize\ttfamily HINSTANCE App\+::m\+\_\+h\+Inst\hspace{0.3cm}{\ttfamily [private]}}
+
+m\+\_\+h\+Inst~\newline
+ handle to the application instance \Hypertarget{class_app_a43e9dcb9a6a49cea143715062ddf3727}\label{class_app_a43e9dcb9a6a49cea143715062ddf3727} 
+\index{App@{App}!m\_hWnd@{m\_hWnd}}
+\index{m\_hWnd@{m\_hWnd}!App@{App}}
+\doxysubsubsection{\texorpdfstring{m\_hWnd}{m\_hWnd}}
+{\footnotesize\ttfamily HWND App\+::m\+\_\+h\+Wnd\hspace{0.3cm}{\ttfamily [private]}}
+
+m\+\_\+h\+Wnd~\newline
+ handle to the application window \Hypertarget{class_app_af74d21c1c9b3d201be6f9d271cd4395b}\label{class_app_af74d21c1c9b3d201be6f9d271cd4395b} 
+\index{App@{App}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!App@{App}}
+\doxysubsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily uint32\+\_\+t App\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+m\+\_\+width~\newline
+ width of the application window 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_app_8h}{App.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_app_8cpp}{App.\+cpp}}\end{DoxyCompactItemize}

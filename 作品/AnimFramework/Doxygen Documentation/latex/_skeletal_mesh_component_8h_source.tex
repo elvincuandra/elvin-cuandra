@@ -1,0 +1,59 @@
+\doxysection{Skeletal\+Mesh\+Component.\+h}
+\hypertarget{_skeletal_mesh_component_8h_source}{}\label{_skeletal_mesh_component_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/SkeletalMeshComponent.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/SkeletalMeshComponent.h}}
+\mbox{\hyperlink{_skeletal_mesh_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SKELETALMESHCOMPONENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SKELETALMESHCOMPONENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_model_loader_8h}{ModelLoader.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_model_renderer_8h}{ModelRenderer.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_animation_loader_8h}{AnimationLoader.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shader_8h}{Shader.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_skeletal_mesh_component}{SkeletalMeshComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_a9aa1e663684e9d1dd2a88d1bdb7674f9}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_a5df94ef88134a61ed0d36ae6bc73b326}{Update}}(uint64\_t\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_ac7639530a4080d029bcc71f80426aff0}{Draw}}(uint64\_t\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_a526ecc03738cec9ee71a4729566081c7}{Uninit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_skeletal_mesh_component_a1d6827ee02f3d9b91f6862475440fcbe}{LoadModel}}(std::string\ fileName);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_af0791a249ad7bd59ef87ba37078ec29f}{LoadAnimation}}(std::string\ fileName,\ std::string\ name);}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::unique\_ptr<ModelLoader>\ \mbox{\hyperlink{class_skeletal_mesh_component_a423091fd57f921c71d2cb7d1aeffd667}{m\_pModel}};}
+\DoxyCodeLine{00028\ \ \ \ \ std::unique\_ptr<ModelRenderer>\ \mbox{\hyperlink{class_skeletal_mesh_component_a53ed18686885fcf5a20a860733721c8c}{m\_pRenderer}};}
+\DoxyCodeLine{00029\ \ \ \ \ std::unique\_ptr<AnimationLoader>\ \mbox{\hyperlink{class_skeletal_mesh_component_a751fa1dde2ce472f46c5f38ecf43fa11}{m\_pAnimation}};}
+\DoxyCodeLine{00030\ \ \ \ \ std::unique\_ptr<Shader>\ \mbox{\hyperlink{class_skeletal_mesh_component_ada6ef5e0fc442d4e51372bab19695b08}{m\_pShader}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ \mbox{\hyperlink{class_skeletal_mesh_component_ac88a4936b11b22b868641d931179582c}{m\_AnimName}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_skeletal_mesh_component_a03bd0eb2ef6c6fbb8f4fd9f53e3c7298}{m\_frame}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_skeletal_mesh_component_acc756d8348017df828aef1c9ce0c8e26}{m\_isPlaying}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_skeletal_mesh_component_aa8d88b5c98cd19121a279c71b6f9d970}{m\_totalFrameTime}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ ImGui\ Debug}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_a0fa749e3d559bc82f8b198fec4053cd1}{PlayAnimationWindow}}();}
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_skeletal_mesh_component_a87f0b32b95dc74796fdddc9e10911f47}{FrameChecker}}(\textcolor{keywordtype}{int}\&\ frameNum);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_model_loader}{ModelLoader}}*\ \mbox{\hyperlink{class_skeletal_mesh_component_a7e86ff27d3b7693c9ea9755ecc063846}{GetModel}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_skeletal_mesh_component_a423091fd57f921c71d2cb7d1aeffd667}{m\_pModel}}.get();\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_model_renderer}{ModelRenderer}}*\ \mbox{\hyperlink{class_skeletal_mesh_component_aa69bf0252eabab4da91b8646bec77d44}{GetRenderer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_skeletal_mesh_component_a53ed18686885fcf5a20a860733721c8c}{m\_pRenderer}}.get();\ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_animation_loader}{AnimationLoader}}*\ \mbox{\hyperlink{class_skeletal_mesh_component_a0400f4e45660215ae5627da046e2ee0f}{GetAnimation}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_skeletal_mesh_component_a751fa1dde2ce472f46c5f38ecf43fa11}{m\_pAnimation}}.get();\ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_shader}{Shader}}*\ \mbox{\hyperlink{class_skeletal_mesh_component_ac9766d12fb595013130096b9d9548385}{GetShader}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_skeletal_mesh_component_ada6ef5e0fc442d4e51372bab19695b08}{m\_pShader}}.get();\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SKELETALMESHCOMPONENT\_H}}
+
+\end{DoxyCode}

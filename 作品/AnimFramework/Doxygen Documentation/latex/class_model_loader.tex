@@ -1,0 +1,291 @@
+\doxysection{Model\+Loader Class Reference}
+\hypertarget{class_model_loader}{}\label{class_model_loader}\index{ModelLoader@{ModelLoader}}
+
+
+{\ttfamily \#include $<$Model\+Loader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_model_loader_a87c31fda13126253b7af33fd9f72a1a0}{Load\+Model}} (const std\+::string \&file\+Name)
+\item 
+void \mbox{\hyperlink{class_model_loader_ab8d4b6ca4fc7d5d5538932997ddfb8aa}{Update}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_animation_loader}{Animation\+Loader}} $>$ \&anim\+Data, const char \texorpdfstring{$\ast$}{*}anim\+Name, int Frame1)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \mbox{\hyperlink{class_model_loader_a17d145fb6ebf9214570d3561b4d03391}{Get\+Vertices}} () const
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_model_loader_ad13179a0d5a5b01f30f4ffc032e0cad0}{Get\+Indices}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \mbox{\hyperlink{class_model_loader_a57dea4253683bcec0aa873b704bef449}{Get\+Materials}} () const
+\item 
+std\+::vector$<$ Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ $>$ \mbox{\hyperlink{class_model_loader_a4e4cb1473ce6e67b21dea6d81d723919}{Get\+SRV}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \mbox{\hyperlink{class_model_loader_a7b0fc22cad8065481e8ef5a9e513e935}{Get\+Subsets}} () const
+\item 
+std\+::vector$<$ Direct\+X\+::\+XMMATRIX $>$ \mbox{\hyperlink{class_model_loader_acdc6ad0fde2cdb0752d99b01cacdd0e2}{Get\+Bone\+Matrix}} () const
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ \mbox{\hyperlink{class_model_loader_a4a14259a6c9cc4b8836f8c8b01e2ecbb}{Get\+Bones}} () const
+\item 
+void \mbox{\hyperlink{class_model_loader_affdcee9dcbb98ea7f5f4c651e79ec2b5}{Set\+Translation}} (std\+::string name, Direct\+X\+::\+XMFLOAT3 translation)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_loader_a282c177692a6cd8a21dd55bbfc01a87b}{Create\+Bone}} (const ai\+Node \texorpdfstring{$\ast$}{*}node)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ \mbox{\hyperlink{class_model_loader_a280ffa5f431972d9d49a62f11b39748e}{Get\+Bone\+Info}} (const ai\+Mesh \texorpdfstring{$\ast$}{*}mesh)
+\item 
+void \mbox{\hyperlink{class_model_loader_ad41d89620bf49e301b2abaef5d137866}{Set\+Bone\+Data\+To\+Vertices}} (std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \&vertices, std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \&subset, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ $>$ \&subset\+Bone)
+\item 
+void \mbox{\hyperlink{class_model_loader_a0d09b51ee9b01dd3349bca06f758a631}{Update\+Bone\+Matrix}} (const ai\+Node \texorpdfstring{$\ast$}{*}node, Direct\+X\+::\+XMMATRIX matrix)
+\item 
+unsigned int \mbox{\hyperlink{class_model_loader_af0cf9e5b26856734689efa2b85eb20df}{Get\+Vertices\+From\+Mesh}} (const ai\+Mesh \texorpdfstring{$\ast$}{*}mesh)
+\item 
+unsigned int \mbox{\hyperlink{class_model_loader_ab076adb75bb0f1cbe991bc036facb5b5}{Get\+Indices\+From\+Mesh}} (const ai\+Mesh \texorpdfstring{$\ast$}{*}mesh)
+\item 
+void \mbox{\hyperlink{class_model_loader_aabe38ed078798bb17be4694cc9b98038}{Calculate\+Mesh\+Base\+Index}} (std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \&subsets)
+\item 
+bool \mbox{\hyperlink{class_model_loader_a4700d2cce33a8f55e15d7b19f682c47e}{Is\+Embedded\+Texture}} (const ai\+Texture \texorpdfstring{$\ast$}{*}texture)
+\item 
+bool \mbox{\hyperlink{class_model_loader_a6ef218f577c406b7849e11354c94bcc7}{Get\+Textures}} (const ai\+Scene \texorpdfstring{$\ast$}{*}mesh)
+\item 
+void \mbox{\hyperlink{class_model_loader_afed46a780f22eec8a73bba7ce9ade99b}{Get\+Materials}} (const ai\+Scene \texorpdfstring{$\ast$}{*}scene)
+\item 
+void \mbox{\hyperlink{class_model_loader_a155272a11d1745756dc9feb4c3ffc523}{Get\+Material}} (const ai\+Material \texorpdfstring{$\ast$}{*}material)
+\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ \mbox{\hyperlink{class_model_loader_a680aa94926025f23b7c94702ec79593b}{Load\+Diffuse\+Texture}} (const std\+::string filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\+\_\+\+Bones}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \mbox{\hyperlink{class_model_loader_a061ad8bf9d47e59aef00f51242bcfcd2}{m\+\_\+\+Subsets}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ $>$ \mbox{\hyperlink{class_model_loader_a9c8f9e442e64a0763b26f4ac88c4e0c1}{m\+\_\+\+Subset\+Bones}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \mbox{\hyperlink{class_model_loader_ad098da2f323942b02847963edc2c7c5b}{m\+\_\+\+Vertices}}
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_model_loader_ab84bac0a0a18158a7139ed17f8aee7d8}{m\+\_\+\+Indices}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ $>$ \mbox{\hyperlink{class_model_loader_aa1b6a116b788ead872a6255693a45252}{m\+\_\+\+Textures}}
+\item 
+std\+::vector$<$ Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ $>$ \mbox{\hyperlink{class_model_loader_abf01862fa0908a9ebe0eda40ab5c0239}{m\+\_\+\+All\+Textures}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ \mbox{\hyperlink{class_model_loader_ac0889b6316a4ce7d4683b146b7ce84ef}{m\+\_\+\+Materials}}
+\item 
+const ai\+Scene \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_loader_a87e5865d5bf211028d4b220cd0946418}{m\+\_\+p\+Scene}}
+\item 
+std\+::vector$<$ Direct\+X\+::\+XMMATRIX $>$ \mbox{\hyperlink{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c}{m\+\_\+\+Bone\+Comb\+Mtx\+Container}}
+\item 
+std\+::string \mbox{\hyperlink{class_model_loader_acbd721a519a8f86b0641c6bec70f1609}{m\+\_\+\+File\+Path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_model_loader_aabe38ed078798bb17be4694cc9b98038}\label{class_model_loader_aabe38ed078798bb17be4694cc9b98038} 
+\index{ModelLoader@{ModelLoader}!CalculateMeshBaseIndex@{CalculateMeshBaseIndex}}
+\index{CalculateMeshBaseIndex@{CalculateMeshBaseIndex}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{CalculateMeshBaseIndex()}{CalculateMeshBaseIndex()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Calculate\+Mesh\+Base\+Index (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \&}]{subsets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a282c177692a6cd8a21dd55bbfc01a87b}\label{class_model_loader_a282c177692a6cd8a21dd55bbfc01a87b} 
+\index{ModelLoader@{ModelLoader}!CreateBone@{CreateBone}}
+\index{CreateBone@{CreateBone}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{CreateBone()}{CreateBone()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Create\+Bone (\begin{DoxyParamCaption}\item[{const ai\+Node \texorpdfstring{$\ast$}{*}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a280ffa5f431972d9d49a62f11b39748e}\label{class_model_loader_a280ffa5f431972d9d49a62f11b39748e} 
+\index{ModelLoader@{ModelLoader}!GetBoneInfo@{GetBoneInfo}}
+\index{GetBoneInfo@{GetBoneInfo}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetBoneInfo()}{GetBoneInfo()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ Model\+Loader\+::\+Get\+Bone\+Info (\begin{DoxyParamCaption}\item[{const ai\+Mesh \texorpdfstring{$\ast$}{*}}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_acdc6ad0fde2cdb0752d99b01cacdd0e2}\label{class_model_loader_acdc6ad0fde2cdb0752d99b01cacdd0e2} 
+\index{ModelLoader@{ModelLoader}!GetBoneMatrix@{GetBoneMatrix}}
+\index{GetBoneMatrix@{GetBoneMatrix}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetBoneMatrix()}{GetBoneMatrix()}}
+{\footnotesize\ttfamily std\+::vector$<$ Direct\+X\+::\+XMMATRIX $>$ Model\+Loader\+::\+Get\+Bone\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_a4a14259a6c9cc4b8836f8c8b01e2ecbb}\label{class_model_loader_a4a14259a6c9cc4b8836f8c8b01e2ecbb} 
+\index{ModelLoader@{ModelLoader}!GetBones@{GetBones}}
+\index{GetBones@{GetBones}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetBones()}{GetBones()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ Model\+Loader\+::\+Get\+Bones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_ad13179a0d5a5b01f30f4ffc032e0cad0}\label{class_model_loader_ad13179a0d5a5b01f30f4ffc032e0cad0} 
+\index{ModelLoader@{ModelLoader}!GetIndices@{GetIndices}}
+\index{GetIndices@{GetIndices}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetIndices()}{GetIndices()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ Model\+Loader\+::\+Get\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_ab076adb75bb0f1cbe991bc036facb5b5}\label{class_model_loader_ab076adb75bb0f1cbe991bc036facb5b5} 
+\index{ModelLoader@{ModelLoader}!GetIndicesFromMesh@{GetIndicesFromMesh}}
+\index{GetIndicesFromMesh@{GetIndicesFromMesh}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetIndicesFromMesh()}{GetIndicesFromMesh()}}
+{\footnotesize\ttfamily unsigned int Model\+Loader\+::\+Get\+Indices\+From\+Mesh (\begin{DoxyParamCaption}\item[{const ai\+Mesh \texorpdfstring{$\ast$}{*}}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a155272a11d1745756dc9feb4c3ffc523}\label{class_model_loader_a155272a11d1745756dc9feb4c3ffc523} 
+\index{ModelLoader@{ModelLoader}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetMaterial()}{GetMaterial()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Get\+Material (\begin{DoxyParamCaption}\item[{const ai\+Material \texorpdfstring{$\ast$}{*}}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a57dea4253683bcec0aa873b704bef449}\label{class_model_loader_a57dea4253683bcec0aa873b704bef449} 
+\index{ModelLoader@{ModelLoader}!GetMaterials@{GetMaterials}}
+\index{GetMaterials@{GetMaterials}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetMaterials()}{GetMaterials()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}} $>$ Model\+Loader\+::\+Get\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_afed46a780f22eec8a73bba7ce9ade99b}\label{class_model_loader_afed46a780f22eec8a73bba7ce9ade99b} 
+\index{ModelLoader@{ModelLoader}!GetMaterials@{GetMaterials}}
+\index{GetMaterials@{GetMaterials}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetMaterials()}{GetMaterials()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Get\+Materials (\begin{DoxyParamCaption}\item[{const ai\+Scene \texorpdfstring{$\ast$}{*}}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a4e4cb1473ce6e67b21dea6d81d723919}\label{class_model_loader_a4e4cb1473ce6e67b21dea6d81d723919} 
+\index{ModelLoader@{ModelLoader}!GetSRV@{GetSRV}}
+\index{GetSRV@{GetSRV}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetSRV()}{GetSRV()}}
+{\footnotesize\ttfamily std\+::vector$<$ Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ $>$ Model\+Loader\+::\+Get\+SRV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_a7b0fc22cad8065481e8ef5a9e513e935}\label{class_model_loader_a7b0fc22cad8065481e8ef5a9e513e935} 
+\index{ModelLoader@{ModelLoader}!GetSubsets@{GetSubsets}}
+\index{GetSubsets@{GetSubsets}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetSubsets()}{GetSubsets()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ Model\+Loader\+::\+Get\+Subsets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_a6ef218f577c406b7849e11354c94bcc7}\label{class_model_loader_a6ef218f577c406b7849e11354c94bcc7} 
+\index{ModelLoader@{ModelLoader}!GetTextures@{GetTextures}}
+\index{GetTextures@{GetTextures}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetTextures()}{GetTextures()}}
+{\footnotesize\ttfamily bool Model\+Loader\+::\+Get\+Textures (\begin{DoxyParamCaption}\item[{const ai\+Scene \texorpdfstring{$\ast$}{*}}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a17d145fb6ebf9214570d3561b4d03391}\label{class_model_loader_a17d145fb6ebf9214570d3561b4d03391} 
+\index{ModelLoader@{ModelLoader}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetVertices()}{GetVertices()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ Model\+Loader\+::\+Get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_af0cf9e5b26856734689efa2b85eb20df}\label{class_model_loader_af0cf9e5b26856734689efa2b85eb20df} 
+\index{ModelLoader@{ModelLoader}!GetVerticesFromMesh@{GetVerticesFromMesh}}
+\index{GetVerticesFromMesh@{GetVerticesFromMesh}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{GetVerticesFromMesh()}{GetVerticesFromMesh()}}
+{\footnotesize\ttfamily unsigned int Model\+Loader\+::\+Get\+Vertices\+From\+Mesh (\begin{DoxyParamCaption}\item[{const ai\+Mesh \texorpdfstring{$\ast$}{*}}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a4700d2cce33a8f55e15d7b19f682c47e}\label{class_model_loader_a4700d2cce33a8f55e15d7b19f682c47e} 
+\index{ModelLoader@{ModelLoader}!IsEmbeddedTexture@{IsEmbeddedTexture}}
+\index{IsEmbeddedTexture@{IsEmbeddedTexture}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{IsEmbeddedTexture()}{IsEmbeddedTexture()}}
+{\footnotesize\ttfamily bool Model\+Loader\+::\+Is\+Embedded\+Texture (\begin{DoxyParamCaption}\item[{const ai\+Texture \texorpdfstring{$\ast$}{*}}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a680aa94926025f23b7c94702ec79593b}\label{class_model_loader_a680aa94926025f23b7c94702ec79593b} 
+\index{ModelLoader@{ModelLoader}!LoadDiffuseTexture@{LoadDiffuseTexture}}
+\index{LoadDiffuseTexture@{LoadDiffuseTexture}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{LoadDiffuseTexture()}{LoadDiffuseTexture()}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ Model\+Loader\+::\+Load\+Diffuse\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a87c31fda13126253b7af33fd9f72a1a0}\label{class_model_loader_a87c31fda13126253b7af33fd9f72a1a0} 
+\index{ModelLoader@{ModelLoader}!LoadModel@{LoadModel}}
+\index{LoadModel@{LoadModel}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{LoadModel()}{LoadModel()}}
+{\footnotesize\ttfamily bool Model\+Loader\+::\+Load\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_model_loader_ad41d89620bf49e301b2abaef5d137866}\label{class_model_loader_ad41d89620bf49e301b2abaef5d137866} 
+\index{ModelLoader@{ModelLoader}!SetBoneDataToVertices@{SetBoneDataToVertices}}
+\index{SetBoneDataToVertices@{SetBoneDataToVertices}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{SetBoneDataToVertices()}{SetBoneDataToVertices()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Set\+Bone\+Data\+To\+Vertices (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}} $>$ \&}]{vertices,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}} $>$ \&}]{subset,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_b_o_n_e}{BONE}} $>$ $>$ \&}]{subset\+Bone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_affdcee9dcbb98ea7f5f4c651e79ec2b5}\label{class_model_loader_affdcee9dcbb98ea7f5f4c651e79ec2b5} 
+\index{ModelLoader@{ModelLoader}!SetTranslation@{SetTranslation}}
+\index{SetTranslation@{SetTranslation}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{SetTranslation()}{SetTranslation()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Set\+Translation (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{Direct\+X\+::\+XMFLOAT3}]{translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_model_loader_ab8d4b6ca4fc7d5d5538932997ddfb8aa}\label{class_model_loader_ab8d4b6ca4fc7d5d5538932997ddfb8aa} 
+\index{ModelLoader@{ModelLoader}!Update@{Update}}
+\index{Update@{Update}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Update (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_animation_loader}{Animation\+Loader}} $>$ \&}]{anim\+Data,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{anim\+Name,  }\item[{int}]{Frame1 }\end{DoxyParamCaption})}
+
+\Hypertarget{class_model_loader_a0d09b51ee9b01dd3349bca06f758a631}\label{class_model_loader_a0d09b51ee9b01dd3349bca06f758a631} 
+\index{ModelLoader@{ModelLoader}!UpdateBoneMatrix@{UpdateBoneMatrix}}
+\index{UpdateBoneMatrix@{UpdateBoneMatrix}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{UpdateBoneMatrix()}{UpdateBoneMatrix()}}
+{\footnotesize\ttfamily void Model\+Loader\+::\+Update\+Bone\+Matrix (\begin{DoxyParamCaption}\item[{const ai\+Node \texorpdfstring{$\ast$}{*}}]{node,  }\item[{Direct\+X\+::\+XMMATRIX}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_model_loader_abf01862fa0908a9ebe0eda40ab5c0239}\label{class_model_loader_abf01862fa0908a9ebe0eda40ab5c0239} 
+\index{ModelLoader@{ModelLoader}!m\_AllTextures@{m\_AllTextures}}
+\index{m\_AllTextures@{m\_AllTextures}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_AllTextures}{m\_AllTextures}}
+{\footnotesize\ttfamily std\+::vector$<$Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Shader\+Resource\+View$>$ $>$ Model\+Loader\+::m\+\_\+\+All\+Textures\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c}\label{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c} 
+\index{ModelLoader@{ModelLoader}!m\_BoneCombMtxContainer@{m\_BoneCombMtxContainer}}
+\index{m\_BoneCombMtxContainer@{m\_BoneCombMtxContainer}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_BoneCombMtxContainer}{m\_BoneCombMtxContainer}}
+{\footnotesize\ttfamily std\+::vector$<$Direct\+X\+::\+XMMATRIX$>$ Model\+Loader\+::m\+\_\+\+Bone\+Comb\+Mtx\+Container\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}\label{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2} 
+\index{ModelLoader@{ModelLoader}!m\_Bones@{m\_Bones}}
+\index{m\_Bones@{m\_Bones}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Bones}{m\_Bones}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{struct_b_o_n_e}{BONE}}$>$ Model\+Loader\+::m\+\_\+\+Bones\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_acbd721a519a8f86b0641c6bec70f1609}\label{class_model_loader_acbd721a519a8f86b0641c6bec70f1609} 
+\index{ModelLoader@{ModelLoader}!m\_FilePath@{m\_FilePath}}
+\index{m\_FilePath@{m\_FilePath}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_FilePath}{m\_FilePath}}
+{\footnotesize\ttfamily std\+::string Model\+Loader\+::m\+\_\+\+File\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_ab84bac0a0a18158a7139ed17f8aee7d8}\label{class_model_loader_ab84bac0a0a18158a7139ed17f8aee7d8} 
+\index{ModelLoader@{ModelLoader}!m\_Indices@{m\_Indices}}
+\index{m\_Indices@{m\_Indices}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Indices}{m\_Indices}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ Model\+Loader\+::m\+\_\+\+Indices\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_ac0889b6316a4ce7d4683b146b7ce84ef}\label{class_model_loader_ac0889b6316a4ce7d4683b146b7ce84ef} 
+\index{ModelLoader@{ModelLoader}!m\_Materials@{m\_Materials}}
+\index{m\_Materials@{m\_Materials}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Materials}{m\_Materials}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}$>$ Model\+Loader\+::m\+\_\+\+Materials\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a87e5865d5bf211028d4b220cd0946418}\label{class_model_loader_a87e5865d5bf211028d4b220cd0946418} 
+\index{ModelLoader@{ModelLoader}!m\_pScene@{m\_pScene}}
+\index{m\_pScene@{m\_pScene}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_pScene}{m\_pScene}}
+{\footnotesize\ttfamily const ai\+Scene\texorpdfstring{$\ast$}{*} Model\+Loader\+::m\+\_\+p\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a9c8f9e442e64a0763b26f4ac88c4e0c1}\label{class_model_loader_a9c8f9e442e64a0763b26f4ac88c4e0c1} 
+\index{ModelLoader@{ModelLoader}!m\_SubsetBones@{m\_SubsetBones}}
+\index{m\_SubsetBones@{m\_SubsetBones}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_SubsetBones}{m\_SubsetBones}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_b_o_n_e}{BONE}}$>$ $>$ Model\+Loader\+::m\+\_\+\+Subset\+Bones\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_a061ad8bf9d47e59aef00f51242bcfcd2}\label{class_model_loader_a061ad8bf9d47e59aef00f51242bcfcd2} 
+\index{ModelLoader@{ModelLoader}!m\_Subsets@{m\_Subsets}}
+\index{m\_Subsets@{m\_Subsets}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Subsets}{m\_Subsets}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_s_u_b_s_e_t}{SUBSET}}$>$ Model\+Loader\+::m\+\_\+\+Subsets\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_aa1b6a116b788ead872a6255693a45252}\label{class_model_loader_aa1b6a116b788ead872a6255693a45252} 
+\index{ModelLoader@{ModelLoader}!m\_Textures@{m\_Textures}}
+\index{m\_Textures@{m\_Textures}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Textures}{m\_Textures}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Shader\+Resource\+View$>$ $>$ Model\+Loader\+::m\+\_\+\+Textures\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_model_loader_ad098da2f323942b02847963edc2c7c5b}\label{class_model_loader_ad098da2f323942b02847963edc2c7c5b} 
+\index{ModelLoader@{ModelLoader}!m\_Vertices@{m\_Vertices}}
+\index{m\_Vertices@{m\_Vertices}!ModelLoader@{ModelLoader}}
+\doxysubsubsection{\texorpdfstring{m\_Vertices}{m\_Vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_v_e_r_t_e_x__3_d}{VERTEX\+\_\+3D}}$>$ Model\+Loader\+::m\+\_\+\+Vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_model_loader_8h}{Model\+Loader.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_model_loader_8cpp}{Model\+Loader.\+cpp}}\end{DoxyCompactItemize}

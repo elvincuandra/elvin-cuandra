@@ -1,0 +1,97 @@
+\doxysection{Vertex\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_vertex_buffer}{}\label{class_vertex_buffer}\index{VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}}
+
+
+\doxylink{class_vertex_buffer}{Vertex\+Buffer} class.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Buffer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_vertex_buffer_a33585f350baef4547f9359848dd28625}{Create}} (const std\+::vector$<$ T $>$ \&vertices)
+\begin{DoxyCompactList}\small\item\em Create function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_buffer_a5cce227e623555879628165b9855c614}{Set\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em Set\+GPU function~\newline
+ \end{DoxyCompactList}\item 
+ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_vertex_buffer_a766c527d08131a9375f59f956df3b352}{Get}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}{m\+\_\+p\+Vertex\+Buffer}}
+\begin{DoxyCompactList}\small\item\em This variable stores the vertex buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Vertex\+Buffer$<$ T $>$}
+\doxylink{class_vertex_buffer}{Vertex\+Buffer} class. 
+
+This class is responsible for creating and setting the vertex buffer. It uses the \doxylink{class_graphics}{Graphics} class to access the device and device context. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & can accept any type of vertex data \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vertex_buffer_a33585f350baef4547f9359848dd28625}\label{class_vertex_buffer_a33585f350baef4547f9359848dd28625} 
+\index{VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}!Create@{Create}}
+\index{Create@{Create}!VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ T $>$\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create function~\newline
+ 
+
+This function creates the vertex buffer. 
+\begin{DoxyParams}{Parameters}
+{\em vertices} & \+: vector of vertices \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_vertex_buffer_a766c527d08131a9375f59f956df3b352}\label{class_vertex_buffer_a766c527d08131a9375f59f956df3b352} 
+\index{VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ T $>$\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns a pointer to the vertex buffer \Hypertarget{class_vertex_buffer_a5cce227e623555879628165b9855c614}\label{class_vertex_buffer_a5cce227e623555879628165b9855c614} 
+\index{VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}!SetGPU@{SetGPU}}
+\index{SetGPU@{SetGPU}!VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetGPU()}{SetGPU()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ T $>$\+::\+Set\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set\+GPU function~\newline
+ 
+
+This function sets the vertex buffer to the GPU. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad}\label{class_vertex_buffer_a8aa0abdef607040b00fde8aa07cc71ad} 
+\index{VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}!m\_pVertexBuffer@{m\_pVertexBuffer}}
+\index{m\_pVertexBuffer@{m\_pVertexBuffer}!VertexBuffer$<$ T $>$@{VertexBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_pVertexBuffer}{m\_pVertexBuffer}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Buffer$>$ \mbox{\hyperlink{class_vertex_buffer}{Vertex\+Buffer}}$<$ T $>$\+::m\+\_\+p\+Vertex\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the vertex buffer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_vertex_buffer_8h}{Vertex\+Buffer.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\doxysection{Model\+Loader.\+h}
+\hypertarget{_model_loader_8h_source}{}\label{_model_loader_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/ModelLoader.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/ModelLoader.h}}
+\mbox{\hyperlink{_model_loader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODELLOADER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODELLOADER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <assimp/cimport.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <assimp/postprocess.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <assimp/scene.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <assimp/Importer.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graphics_8h}{Graphics.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{structs_8h}{structs.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <directxtk/WICTextureLoader.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <directxtex/DirectXTex.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_animation_loader_8h}{AnimationLoader.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}DirectXTK.lib"{})}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}DirectXTex.lib"{})}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#if\ \_DEBUG}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}assimp-\/vc143-\/mtd.lib"{})}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}assimp-\/vc143-\/mt.lib"{})}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_model_loader}{ModelLoader}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_model_loader_a87c31fda13126253b7af33fd9f72a1a0}{LoadModel}}(\textcolor{keyword}{const}\ std::string\&\ fileName);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_ab8d4b6ca4fc7d5d5538932997ddfb8aa}{Update}}(std::unique\_ptr<AnimationLoader>\&\ animData,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ animName,\ \textcolor{keywordtype}{int}\ Frame1);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_a282c177692a6cd8a21dd55bbfc01a87b}{CreateBone}}(\textcolor{keyword}{const}\ aiNode*\ node);}
+\DoxyCodeLine{00039\ \ \ \ \ std::vector<BONE>\ \mbox{\hyperlink{class_model_loader_a280ffa5f431972d9d49a62f11b39748e}{GetBoneInfo}}(\textcolor{keyword}{const}\ aiMesh*\ mesh);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_ad41d89620bf49e301b2abaef5d137866}{SetBoneDataToVertices}}(std::vector<VERTEX\_3D>\&\ vertices,\ std::vector<SUBSET>\&\ subset,\ std::vector<std::vector<BONE>>\&\ subsetBone);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_a0d09b51ee9b01dd3349bca06f758a631}{UpdateBoneMatrix}}(\textcolor{keyword}{const}\ aiNode*\ node,\ DirectX::XMMATRIX\ matrix);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_model_loader_af0cf9e5b26856734689efa2b85eb20df}{GetVerticesFromMesh}}(\textcolor{keyword}{const}\ aiMesh*\ mesh);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_model_loader_ab076adb75bb0f1cbe991bc036facb5b5}{GetIndicesFromMesh}}(\textcolor{keyword}{const}\ aiMesh*\ mesh);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_aabe38ed078798bb17be4694cc9b98038}{CalculateMeshBaseIndex}}(std::vector<SUBSET>\&\ subsets);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_model_loader_a4700d2cce33a8f55e15d7b19f682c47e}{IsEmbeddedTexture}}(\textcolor{keyword}{const}\ aiTexture*\ texture);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_model_loader_a6ef218f577c406b7849e11354c94bcc7}{GetTextures}}(\textcolor{keyword}{const}\ aiScene*\ mesh);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_a57dea4253683bcec0aa873b704bef449}{GetMaterials}}(\textcolor{keyword}{const}\ aiScene*\ scene);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_a155272a11d1745756dc9feb4c3ffc523}{GetMaterial}}(\textcolor{keyword}{const}\ aiMaterial*\ material);}
+\DoxyCodeLine{00049\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>\ \mbox{\hyperlink{class_model_loader_a680aa94926025f23b7c94702ec79593b}{LoadDiffuseTexture}}(\textcolor{keyword}{const}\ std::string\ filename);}
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ std::unordered\_map<std::string,\ BONE>\ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}};}
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<SUBSET>\ \mbox{\hyperlink{class_model_loader_a061ad8bf9d47e59aef00f51242bcfcd2}{m\_Subsets}};}
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<std::vector<BONE>>\ \mbox{\hyperlink{class_model_loader_a9c8f9e442e64a0763b26f4ac88c4e0c1}{m\_SubsetBones}};}
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<VERTEX\_3D>\ \mbox{\hyperlink{class_model_loader_ad098da2f323942b02847963edc2c7c5b}{m\_Vertices}};}
+\DoxyCodeLine{00055\ \ \ \ \ std::vector<unsigned\ int>\ \mbox{\hyperlink{class_model_loader_ab84bac0a0a18158a7139ed17f8aee7d8}{m\_Indices}};}
+\DoxyCodeLine{00056\ \ \ \ \ std::unordered\_map<std::string,\ Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>>\ \mbox{\hyperlink{class_model_loader_aa1b6a116b788ead872a6255693a45252}{m\_Textures}};}
+\DoxyCodeLine{00057\ \ \ \ \ std::vector<Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>>\ \mbox{\hyperlink{class_model_loader_abf01862fa0908a9ebe0eda40ab5c0239}{m\_AllTextures}};}
+\DoxyCodeLine{00058\ \ \ \ \ std::vector<MATERIAL>\ \mbox{\hyperlink{class_model_loader_ac0889b6316a4ce7d4683b146b7ce84ef}{m\_Materials}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ aiScene*\ \mbox{\hyperlink{class_model_loader_a87e5865d5bf211028d4b220cd0946418}{m\_pScene}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<DirectX::XMMATRIX>\ \mbox{\hyperlink{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c}{m\_BoneCombMtxContainer}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ std::string\ \mbox{\hyperlink{class_model_loader_acbd721a519a8f86b0641c6bec70f1609}{m\_FilePath}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Getter}}
+\DoxyCodeLine{00067\ \ \ \ \ std::vector<VERTEX\_3D>\ \mbox{\hyperlink{class_model_loader_a17d145fb6ebf9214570d3561b4d03391}{GetVertices}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_ad098da2f323942b02847963edc2c7c5b}{m\_Vertices}};\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ std::vector<unsigned\ int>\ \mbox{\hyperlink{class_model_loader_ad13179a0d5a5b01f30f4ffc032e0cad0}{GetIndices}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_ab84bac0a0a18158a7139ed17f8aee7d8}{m\_Indices}};\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ std::vector<MATERIAL>\ \mbox{\hyperlink{class_model_loader_a57dea4253683bcec0aa873b704bef449}{GetMaterials}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_ac0889b6316a4ce7d4683b146b7ce84ef}{m\_Materials}};\ \}}
+\DoxyCodeLine{00070\ \ \ \ \ std::vector<Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>>\ \mbox{\hyperlink{class_model_loader_a4e4cb1473ce6e67b21dea6d81d723919}{GetSRV}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_abf01862fa0908a9ebe0eda40ab5c0239}{m\_AllTextures}};\ \}}
+\DoxyCodeLine{00071\ \ \ \ \ std::vector<SUBSET>\ \mbox{\hyperlink{class_model_loader_a7b0fc22cad8065481e8ef5a9e513e935}{GetSubsets}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_a061ad8bf9d47e59aef00f51242bcfcd2}{m\_Subsets}};\ \}}
+\DoxyCodeLine{00072\ \ \ \ \ std::vector<DirectX::XMMATRIX>\ \mbox{\hyperlink{class_model_loader_acdc6ad0fde2cdb0752d99b01cacdd0e2}{GetBoneMatrix}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c}{m\_BoneCombMtxContainer}};\ \}}
+\DoxyCodeLine{00073\ \ \ \ \ std::unordered\_map<std::string,\ BONE>\ \mbox{\hyperlink{class_model_loader_a4a14259a6c9cc4b8836f8c8b01e2ecbb}{GetBones}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}};\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Setter}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_loader_affdcee9dcbb98ea7f5f4c651e79ec2b5}{SetTranslation}}(std::string\ name,\ DirectX::XMFLOAT3\ translation)\ \{\ \textcolor{comment}{//\ Set\ translation\ offset\ to\ existing\ bone}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ DirectX::XMFLOAT4X4\ destination;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ DirectX::XMStoreFloat4x4(\&destination,\ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}}[name].Matrix);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ destination.\_41\ +=\ translation.x;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ destination.\_42\ +=\ translation.y;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ destination.\_43\ +=\ translation.z;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}}[name].Matrix\ =\ DirectX::XMLoadFloat4x4(\&destination);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_model_loader_a20f84c82c8dbc85d78bd7e084e848e6c}{m\_BoneCombMtxContainer}}[\mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}}[name].idx]\ =\ \mbox{\hyperlink{class_model_loader_afec83122b60062dc6357ee6b43b4d5c2}{m\_Bones}}[name].Matrix;}
+\DoxyCodeLine{00084\ \ \ \ \ \}\ }
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MODELLOADER\_H}}
+
+\end{DoxyCode}

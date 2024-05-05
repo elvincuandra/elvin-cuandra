@@ -1,0 +1,156 @@
+\doxysection{Shader Class Reference}
+\hypertarget{class_shader}{}\label{class_shader}\index{Shader@{Shader}}
+
+
+\doxylink{class_shader}{Shader} class.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shader_a265a06c6308954733d3a651ddf798358}{Set\+Shader}} (std\+::string vs, std\+::string ps)
+\begin{DoxyCompactList}\small\item\em Set\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shader_a811382542f994084a86f29606d5255ed}{Set\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em Set\+GPU function~\newline
+ \end{DoxyCompactList}\item 
+ID3\+D11\+Vertex\+Shader \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shader_aab11cc049ec1ce1897a96fbc3ec34010}{Get\+Vertex\+Shader}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Vertex\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+ID3\+D11\+Pixel\+Shader \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shader_ab530be643863fcdd71e33d2733e33cae}{Get\+Pixel\+Shader}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Pixel\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+ID3\+D11\+Input\+Layout \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shader_a063008c2083b02b4b7bac574263cd397}{Get\+Input\+Layout}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Input\+Layout function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Vertex\+Shader $>$ \mbox{\hyperlink{class_shader_a4881e299d14101dd9f8ee161df13a079}{m\+\_\+p\+Vertex\+Shader}}
+\begin{DoxyCompactList}\small\item\em This variable stores the vertex shader. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Pixel\+Shader $>$ \mbox{\hyperlink{class_shader_a2cf295dca549517fe434ec5d058354a2}{m\+\_\+p\+Pixel\+Shader}}
+\begin{DoxyCompactList}\small\item\em This variable stores the pixel shader. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Input\+Layout $>$ \mbox{\hyperlink{class_shader_ac3cbf914c6a597a4fa041df0ff2c31fa}{m\+\_\+p\+Input\+Layout}}
+\begin{DoxyCompactList}\small\item\em This variable stores the input layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_shader}{Shader} class. 
+
+This class is responsible for managing the shader. It is responsible for setting the shader and the GPU. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shader_a063008c2083b02b4b7bac574263cd397}\label{class_shader_a063008c2083b02b4b7bac574263cd397} 
+\index{Shader@{Shader}!GetInputLayout@{GetInputLayout}}
+\index{GetInputLayout@{GetInputLayout}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{GetInputLayout()}{GetInputLayout()}}
+{\footnotesize\ttfamily ID3\+D11\+Input\+Layout \texorpdfstring{$\ast$}{*} Shader\+::\+Get\+Input\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Input\+Layout function~\newline
+ 
+
+This function returns the pointer to the input layout. \begin{DoxyReturn}{Returns}
+pointer to the input layout 
+\end{DoxyReturn}
+\Hypertarget{class_shader_ab530be643863fcdd71e33d2733e33cae}\label{class_shader_ab530be643863fcdd71e33d2733e33cae} 
+\index{Shader@{Shader}!GetPixelShader@{GetPixelShader}}
+\index{GetPixelShader@{GetPixelShader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{GetPixelShader()}{GetPixelShader()}}
+{\footnotesize\ttfamily ID3\+D11\+Pixel\+Shader \texorpdfstring{$\ast$}{*} Shader\+::\+Get\+Pixel\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Pixel\+Shader function~\newline
+ 
+
+This function returns the pointer to the pixel shader. \begin{DoxyReturn}{Returns}
+pointer to the pixel shader 
+\end{DoxyReturn}
+\Hypertarget{class_shader_aab11cc049ec1ce1897a96fbc3ec34010}\label{class_shader_aab11cc049ec1ce1897a96fbc3ec34010} 
+\index{Shader@{Shader}!GetVertexShader@{GetVertexShader}}
+\index{GetVertexShader@{GetVertexShader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{GetVertexShader()}{GetVertexShader()}}
+{\footnotesize\ttfamily ID3\+D11\+Vertex\+Shader \texorpdfstring{$\ast$}{*} Shader\+::\+Get\+Vertex\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Vertex\+Shader function~\newline
+ 
+
+This function returns the pointer to the vertex shader. \begin{DoxyReturn}{Returns}
+pointer to the vertex shader 
+\end{DoxyReturn}
+\Hypertarget{class_shader_a811382542f994084a86f29606d5255ed}\label{class_shader_a811382542f994084a86f29606d5255ed} 
+\index{Shader@{Shader}!SetGPU@{SetGPU}}
+\index{SetGPU@{SetGPU}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{SetGPU()}{SetGPU()}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set\+GPU function~\newline
+ 
+
+This function sets the shader to the GPU. \Hypertarget{class_shader_a265a06c6308954733d3a651ddf798358}\label{class_shader_a265a06c6308954733d3a651ddf798358} 
+\index{Shader@{Shader}!SetShader@{SetShader}}
+\index{SetShader@{SetShader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{SetShader()}{SetShader()}}
+{\footnotesize\ttfamily void Shader\+::\+Set\+Shader (\begin{DoxyParamCaption}\item[{std\+::string}]{vs,  }\item[{std\+::string}]{ps }\end{DoxyParamCaption})}
+
+
+
+Set\+Shader function~\newline
+ 
+
+This function sets the shader. 
+\begin{DoxyParams}{Parameters}
+{\em vs} & \+: vertex shader \\
+\hline
+{\em ps} & \+: pixel shader \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shader_ac3cbf914c6a597a4fa041df0ff2c31fa}\label{class_shader_ac3cbf914c6a597a4fa041df0ff2c31fa} 
+\index{Shader@{Shader}!m\_pInputLayout@{m\_pInputLayout}}
+\index{m\_pInputLayout@{m\_pInputLayout}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{m\_pInputLayout}{m\_pInputLayout}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Input\+Layout$>$ Shader\+::m\+\_\+p\+Input\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the input layout. 
+
+\Hypertarget{class_shader_a2cf295dca549517fe434ec5d058354a2}\label{class_shader_a2cf295dca549517fe434ec5d058354a2} 
+\index{Shader@{Shader}!m\_pPixelShader@{m\_pPixelShader}}
+\index{m\_pPixelShader@{m\_pPixelShader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{m\_pPixelShader}{m\_pPixelShader}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Pixel\+Shader$>$ Shader\+::m\+\_\+p\+Pixel\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the pixel shader. 
+
+\Hypertarget{class_shader_a4881e299d14101dd9f8ee161df13a079}\label{class_shader_a4881e299d14101dd9f8ee161df13a079} 
+\index{Shader@{Shader}!m\_pVertexShader@{m\_pVertexShader}}
+\index{m\_pVertexShader@{m\_pVertexShader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{m\_pVertexShader}{m\_pVertexShader}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Vertex\+Shader$>$ Shader\+::m\+\_\+p\+Vertex\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the vertex shader. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

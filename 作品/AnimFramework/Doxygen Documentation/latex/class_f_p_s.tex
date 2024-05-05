@@ -1,0 +1,145 @@
+\doxysection{FPS Class Reference}
+\hypertarget{class_f_p_s}{}\label{class_f_p_s}\index{FPS@{FPS}}
+
+
+\doxylink{class_f_p_s}{FPS} class.  
+
+
+
+
+{\ttfamily \#include $<$fpscontrol.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_f_p_s_a731dd05bb14a606dcb40b6414a95d32c}{FPS}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_f_p_s}{FPS} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_f_p_s_abd5ce5d592e0f1457db1c69caa53c050}{FPS}} (uint64\+\_\+t f)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_f_p_s}{FPS} constructor. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_f_p_s_af02372c3e55e98c6521f7dfd6cf1dd34}{Calc\+Delta}} ()
+\item 
+void \mbox{\hyperlink{class_f_p_s_a1390f1370456c8f3d260563d075c945b}{Set\+FPS}} (uint64\+\_\+t f)
+\item 
+void \mbox{\hyperlink{class_f_p_s_a44921d7c5d49e473b0622701118f22d2}{Wait}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}{m\+\_\+\+Microseconds\+Per\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em microseconds per frame. (only used for CFR) \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}{m\+\_\+current\+Time}} = 0
+\begin{DoxyCompactList}\small\item\em current time \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f}{m\+\_\+last\+Time}} = 0
+\begin{DoxyCompactList}\small\item\em last time \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_f_p_s_a508840c437caf9028d712515a84aa89c}{m\+\_\+delta\+Time}} = 0
+\begin{DoxyCompactList}\small\item\em time passed since the last frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_f_p_s}{FPS} class. 
+
+This class is responsible for controlling the frame rate of the application. It calculates the time passed since the last frame and waits for the remaining time to meet the desired frame rate. It has two options \+: VFR and CFR. VFR (Variable Frame Rate) \+: The frame rate is not fixed. It is calculated dynamically. CFR (Constant Frame Rate) \+: The frame rate is fixed. It is set by the user. CFR uses thread to wait for the remaining time to meet the desired frame rate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_f_p_s_a731dd05bb14a606dcb40b6414a95d32c}\label{class_f_p_s_a731dd05bb14a606dcb40b6414a95d32c} 
+\index{FPS@{FPS}!FPS@{FPS}}
+\index{FPS@{FPS}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{FPS()}{FPS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily FPS\+::\+FPS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_f_p_s}{FPS} constructor. 
+
+\Hypertarget{class_f_p_s_abd5ce5d592e0f1457db1c69caa53c050}\label{class_f_p_s_abd5ce5d592e0f1457db1c69caa53c050} 
+\index{FPS@{FPS}!FPS@{FPS}}
+\index{FPS@{FPS}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{FPS()}{FPS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily FPS\+::\+FPS (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_f_p_s}{FPS} constructor. 
+
+This constructor initializes with CFR 
+\begin{DoxyParams}{Parameters}
+{\em f} & refers to the user\textquotesingle{}s desired frame rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_p_s_af02372c3e55e98c6521f7dfd6cf1dd34}\label{class_f_p_s_af02372c3e55e98c6521f7dfd6cf1dd34} 
+\index{FPS@{FPS}!CalcDelta@{CalcDelta}}
+\index{CalcDelta@{CalcDelta}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{CalcDelta()}{CalcDelta()}}
+{\footnotesize\ttfamily uint64\+\_\+t FPS\+::\+Calc\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the frame time between previous frame and current frame. \begin{DoxyReturn}{Returns}
+the time passed since the last frame (delta\+Time). 
+\end{DoxyReturn}
+\Hypertarget{class_f_p_s_a1390f1370456c8f3d260563d075c945b}\label{class_f_p_s_a1390f1370456c8f3d260563d075c945b} 
+\index{FPS@{FPS}!SetFPS@{SetFPS}}
+\index{SetFPS@{SetFPS}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{SetFPS()}{SetFPS()}}
+{\footnotesize\ttfamily void FPS\+::\+Set\+FPS (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the frame rate. 
+\begin{DoxyParams}{Parameters}
+{\em f} & refers to the user\textquotesingle{}s desired frame rate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_p_s_a44921d7c5d49e473b0622701118f22d2}\label{class_f_p_s_a44921d7c5d49e473b0622701118f22d2} 
+\index{FPS@{FPS}!Wait@{Wait}}
+\index{Wait@{Wait}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily void FPS\+::\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Waits for the remaining time to meet the desired frame rate. This function uses thread to wait for the remaining time to meet the desired frame rate. Sleeps the thread for the difference between the desired time passed for every frame and the delta\+Time. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72}\label{class_f_p_s_a8704fe50b2d2702b37af946dbbc85c72} 
+\index{FPS@{FPS}!m\_currentTime@{m\_currentTime}}
+\index{m\_currentTime@{m\_currentTime}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{m\_currentTime}{m\_currentTime}}
+{\footnotesize\ttfamily uint64\+\_\+t FPS\+::m\+\_\+current\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+current time 
+
+\Hypertarget{class_f_p_s_a508840c437caf9028d712515a84aa89c}\label{class_f_p_s_a508840c437caf9028d712515a84aa89c} 
+\index{FPS@{FPS}!m\_deltaTime@{m\_deltaTime}}
+\index{m\_deltaTime@{m\_deltaTime}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{m\_deltaTime}{m\_deltaTime}}
+{\footnotesize\ttfamily uint64\+\_\+t FPS\+::m\+\_\+delta\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+time passed since the last frame 
+
+\Hypertarget{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f}\label{class_f_p_s_a6b5ad367573931cc494c9fdb38cbab5f} 
+\index{FPS@{FPS}!m\_lastTime@{m\_lastTime}}
+\index{m\_lastTime@{m\_lastTime}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{m\_lastTime}{m\_lastTime}}
+{\footnotesize\ttfamily uint64\+\_\+t FPS\+::m\+\_\+last\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+last time 
+
+\Hypertarget{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce}\label{class_f_p_s_a1c4e617da1494680ef8643bb45b211ce} 
+\index{FPS@{FPS}!m\_MicrosecondsPerFrame@{m\_MicrosecondsPerFrame}}
+\index{m\_MicrosecondsPerFrame@{m\_MicrosecondsPerFrame}!FPS@{FPS}}
+\doxysubsubsection{\texorpdfstring{m\_MicrosecondsPerFrame}{m\_MicrosecondsPerFrame}}
+{\footnotesize\ttfamily uint64\+\_\+t FPS\+::m\+\_\+\+Microseconds\+Per\+Frame = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+microseconds per frame. (only used for CFR) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{fpscontrol_8h}{fpscontrol.\+h}}\end{DoxyCompactItemize}

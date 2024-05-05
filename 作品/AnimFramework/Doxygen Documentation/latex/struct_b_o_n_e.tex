@@ -1,0 +1,105 @@
+\doxysection{BONE Struct Reference}
+\hypertarget{struct_b_o_n_e}{}\label{struct_b_o_n_e}\index{BONE@{BONE}}
+
+
+This structure contains the bone data of a 3D model.  
+
+
+
+
+{\ttfamily \#include $<$structs.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_b_o_n_e_a2d1e2e3269ed5c63c16abb35b334575a}{Bone\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{struct_b_o_n_e_ab497235a03f406b67abd523ff3d6103e}{Mesh\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{struct_b_o_n_e_a02673da82b0297cecf9316c33ca60af8}{Armature\+Name}}
+\item 
+int \mbox{\hyperlink{struct_b_o_n_e_a6184ce49cb717a3e237964ac4a0bb805}{idx}} = 0
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{struct_b_o_n_e_a18a0735769f975535eb22f1caf33ee06}{Matrix}} = Direct\+X\+::\+XMMatrix\+Identity()
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{struct_b_o_n_e_a2e7388dda5126658077af2f9f3e0d00c}{Offset\+Matrix}} = Direct\+X\+::\+XMMatrix\+Identity()
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{struct_b_o_n_e_aa05e9aae3bcdaea2d296ac520d2d4374}{Animation\+Matrix}} = Direct\+X\+::\+XMMatrix\+Identity()
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{struct_b_o_n_e_abf04b80302a8dc8cc6bab792b330a2db}{Blend1}} = Direct\+X\+::\+XMMatrix\+Identity()
+\item 
+Direct\+X\+::\+XMMATRIX \mbox{\hyperlink{struct_b_o_n_e_aceb2956f8860efbcc5aea317dd8c0b22}{Blend2}} = Direct\+X\+::\+XMMatrix\+Identity()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_w_e_i_g_h_t}{WEIGHT}} $>$ \mbox{\hyperlink{struct_b_o_n_e_ade160828f48751a546621a1387b63439}{weights}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This structure contains the bone data of a 3D model. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_b_o_n_e_aa05e9aae3bcdaea2d296ac520d2d4374}\label{struct_b_o_n_e_aa05e9aae3bcdaea2d296ac520d2d4374} 
+\index{BONE@{BONE}!AnimationMatrix@{AnimationMatrix}}
+\index{AnimationMatrix@{AnimationMatrix}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{AnimationMatrix}{AnimationMatrix}}
+{\footnotesize\ttfamily BONE\+::\+Animation\+Matrix = Direct\+X\+::\+XMMatrix\+Identity()}
+
+Member \textquotesingle{}Animation\+Matrix\textquotesingle{} contains the animation matrix of the bone. \Hypertarget{struct_b_o_n_e_a02673da82b0297cecf9316c33ca60af8}\label{struct_b_o_n_e_a02673da82b0297cecf9316c33ca60af8} 
+\index{BONE@{BONE}!ArmatureName@{ArmatureName}}
+\index{ArmatureName@{ArmatureName}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{ArmatureName}{ArmatureName}}
+{\footnotesize\ttfamily BONE\+::\+Armature\+Name}
+
+Member \textquotesingle{}Armature\+Name\textquotesingle{} contains the name of the armature. \Hypertarget{struct_b_o_n_e_abf04b80302a8dc8cc6bab792b330a2db}\label{struct_b_o_n_e_abf04b80302a8dc8cc6bab792b330a2db} 
+\index{BONE@{BONE}!Blend1@{Blend1}}
+\index{Blend1@{Blend1}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{Blend1}{Blend1}}
+{\footnotesize\ttfamily BONE\+::\+Blend1 = Direct\+X\+::\+XMMatrix\+Identity()}
+
+Member \textquotesingle{}Blend1\textquotesingle{} contains the blend matrix 1 of the bone. \Hypertarget{struct_b_o_n_e_aceb2956f8860efbcc5aea317dd8c0b22}\label{struct_b_o_n_e_aceb2956f8860efbcc5aea317dd8c0b22} 
+\index{BONE@{BONE}!Blend2@{Blend2}}
+\index{Blend2@{Blend2}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{Blend2}{Blend2}}
+{\footnotesize\ttfamily BONE\+::\+Blend2 = Direct\+X\+::\+XMMatrix\+Identity()}
+
+Member \textquotesingle{}Blend2\textquotesingle{} contains the blend matrix 2 of the bone. \Hypertarget{struct_b_o_n_e_a2d1e2e3269ed5c63c16abb35b334575a}\label{struct_b_o_n_e_a2d1e2e3269ed5c63c16abb35b334575a} 
+\index{BONE@{BONE}!BoneName@{BoneName}}
+\index{BoneName@{BoneName}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{BoneName}{BoneName}}
+{\footnotesize\ttfamily BONE\+::\+Bone\+Name}
+
+Member \textquotesingle{}Bone\+Name\textquotesingle{} contains the name of the bone. \Hypertarget{struct_b_o_n_e_a6184ce49cb717a3e237964ac4a0bb805}\label{struct_b_o_n_e_a6184ce49cb717a3e237964ac4a0bb805} 
+\index{BONE@{BONE}!idx@{idx}}
+\index{idx@{idx}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily BONE\+::idx = 0}
+
+Member \textquotesingle{}idx\textquotesingle{} contains the index of the bone. \Hypertarget{struct_b_o_n_e_a18a0735769f975535eb22f1caf33ee06}\label{struct_b_o_n_e_a18a0735769f975535eb22f1caf33ee06} 
+\index{BONE@{BONE}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{Matrix}{Matrix}}
+{\footnotesize\ttfamily BONE\+::\+Matrix = Direct\+X\+::\+XMMatrix\+Identity()}
+
+Member \textquotesingle{}Matrix\textquotesingle{} contains the matrix of the bone. \Hypertarget{struct_b_o_n_e_ab497235a03f406b67abd523ff3d6103e}\label{struct_b_o_n_e_ab497235a03f406b67abd523ff3d6103e} 
+\index{BONE@{BONE}!MeshName@{MeshName}}
+\index{MeshName@{MeshName}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{MeshName}{MeshName}}
+{\footnotesize\ttfamily BONE\+::\+Mesh\+Name}
+
+Member \textquotesingle{}Mesh\+Name\textquotesingle{} contains the name of the mesh. \Hypertarget{struct_b_o_n_e_a2e7388dda5126658077af2f9f3e0d00c}\label{struct_b_o_n_e_a2e7388dda5126658077af2f9f3e0d00c} 
+\index{BONE@{BONE}!OffsetMatrix@{OffsetMatrix}}
+\index{OffsetMatrix@{OffsetMatrix}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{OffsetMatrix}{OffsetMatrix}}
+{\footnotesize\ttfamily BONE\+::\+Offset\+Matrix = Direct\+X\+::\+XMMatrix\+Identity()}
+
+Member \textquotesingle{}Offset\+Matrix\textquotesingle{} contains the offset matrix of the bone. \Hypertarget{struct_b_o_n_e_ade160828f48751a546621a1387b63439}\label{struct_b_o_n_e_ade160828f48751a546621a1387b63439} 
+\index{BONE@{BONE}!weights@{weights}}
+\index{weights@{weights}!BONE@{BONE}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily BONE\+::weights}
+
+Member \textquotesingle{}weights\textquotesingle{} contains the weights of the bone. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{structs_8h}{structs.\+h}}\end{DoxyCompactItemize}

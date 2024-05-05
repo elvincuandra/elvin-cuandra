@@ -1,0 +1,135 @@
+\doxysection{Object.\+h}
+\hypertarget{_object_8h_source}{}\label{_object_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Object.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Object.h}}
+\mbox{\hyperlink{_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBJECT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBJECT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <DirectXMath.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object}{Object}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_object_aa3e791419d84c4c346ef9499513b8e00}{\string~Object}}()\ \{\};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_aecceec6388c815bb2d016dd297a2c784}{InitBase}}()\ \{\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\ :\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ component.second-\/>InitBase();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}}();\ }
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a30c838f94fadf9e8b9e583a2d0815220}{UpdateBase}}(uint64\_t\ deltaTime)\ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\ :\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}})}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ component.second-\/>UpdateBase(deltaTime);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_a6f730d3e4c42a63fe2fec85080234048}{Update}}(deltaTime);\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a167a5ff4747ba659cfd4a0e1f8d238df}{DrawBase}}(uint64\_t\ deltaTime)\ \{}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\ :\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ component.second-\/>DrawBase(deltaTime);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_a85345a93d1850e07d2a9d223d2a0caec}{Draw}}(deltaTime);\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_aa0d4b6f488ddb1958e1a5eb2269affda}{UninitBase}}()\ \{}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\ :\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ component.second-\/>UninitBase();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Uninit}}();\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Init}}()\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a6f730d3e4c42a63fe2fec85080234048}{Update}}(uint64\_t\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a85345a93d1850e07d2a9d223d2a0caec}{Draw}}(uint64\_t\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_abdcaa08db039b5deb37d5ac6b1377c9f}{Uninit}}()\ =\ 0;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ std::map<std::string,\ std::shared\_ptr<Component>>\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}};\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00077\ \ \ \ \ T*\ \mbox{\hyperlink{class_object_a1f5cd7d8803dcc0d9114b9c5163507c6}{CreateComponent}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ componentName)}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ component\ =\ std::make\_shared<T>();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}}.insert(std::pair\ <\ std::string,\ std::shared\_ptr<Component>\ >(componentName,\ component));}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ component.get()-\/>InitBase();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component.get();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00091\ \ \ \ \ T*\ \mbox{\hyperlink{class_object_a2af772de8637314b4b8abf421885a331}{GetComponent}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ componentName)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}}.find(componentName);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ \mbox{\hyperlink{class_object_aa5af7c942d1f56547e3ab577474705e0}{m\_components}}.end())}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}T*\textcolor{keyword}{>}(it-\/>second.get());}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00101\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}};\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#pragma\ region\ Getter}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00111\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_a43c8f1f6568781b4c10ff54e6bf083ef}{GetPosition}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}};\ \}}
+\DoxyCodeLine{00113\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_a4f77875ca5546a25de7067b24a96bd88}{GetRotation}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}};\ \}}
+\DoxyCodeLine{00114\ \ \ \ \ DirectX::XMFLOAT3\ \mbox{\hyperlink{class_object_a9664d487488bfb536363931d251bdacb}{GetScale}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}};\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ DirectX::XMVECTOR\ \mbox{\hyperlink{class_object_a8cfe4332087e6783f1038640a5e7ad04}{GetPositionXM}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ DirectX::XMLoadFloat3(\&\mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}});\ \}}
+\DoxyCodeLine{00117\ \ \ \ \ DirectX::XMVECTOR\ \mbox{\hyperlink{class_object_a7b400ce2d2023183430df794ca01bff9}{GetRotationXM}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ DirectX::XMLoadFloat3(\&\mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}});\ \};}
+\DoxyCodeLine{00118\ \ \ \ \ DirectX::XMVECTOR\ \mbox{\hyperlink{class_object_a2e71dae189de0910690d5b5b1a4a0ed5}{GetScaleXM}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ DirectX::XMLoadFloat3(\&\mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}});\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ DirectX::XMMATRIX\ \mbox{\hyperlink{class_object_a0fca9ad74e3d3589a311d75c76cfd053}{GetTransform}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00121\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DirectX::XMMatrixScaling(\mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}}.x,\ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}}.y,\ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}}.z)\ *}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ DirectX::XMMatrixRotationRollPitchYaw(\mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}}.y,\ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}}.x,\ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}}.z)\ *}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ DirectX::XMMatrixTranslation(\mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}}.x,\ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}}.y,\ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}}.z);}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#pragma\ region\ Setter}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_ab15a9d47f9cf0f88df2fcb32057f306d}{SetPosition}}(\textcolor{keyword}{const}\ DirectX::XMFLOAT3\ position)\ \{\ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}}\ =\ position;\ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a9bb483520f5f229404a1aaf19c64601c}{SetRotation}}(\textcolor{keyword}{const}\ DirectX::XMFLOAT3\ rotation)\ \{\ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}}\ =\ rotation;\ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a626cdd48f0bf4d810f921ffbf52fcb2a}{SetScale}}(\textcolor{keyword}{const}\ DirectX::XMFLOAT3\ scale)\ \{\ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}}\ =\ scale;\ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_object_a8d0ea679e0b917e3c32b86799cddba68}{SetTransform}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ position,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ rotation,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ scale)}
+\DoxyCodeLine{00136\ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_a53d1e6ba75ca1c271f2337382ca58f7c}{m\_position}}\ =\ DirectX::XMFLOAT3(position[0],\ position[1],\ position[2]);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_aee08b7eec31328093df49862f316b3fe}{m\_rotation}}\ =\ DirectX::XMFLOAT3(rotation[0],\ rotation[1],\ rotation[2]);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_object_a308f0e44a53f75c1f452fcb1f59c3352}{m\_scale}}\ =\ DirectX::XMFLOAT3(scale[0],\ scale[1],\ scale[2]);}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OBJECT\_H}}
+
+\end{DoxyCode}

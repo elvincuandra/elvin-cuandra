@@ -1,0 +1,133 @@
+\doxysection{Component Class Reference}
+\hypertarget{class_component}{}\label{class_component}\index{Component@{Component}}
+
+
+\doxylink{class_component}{Component} class.  
+
+
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_component_aed37c69469e2109d0a35235367dab687}{Init\+Base}} ()
+\item 
+void \mbox{\hyperlink{class_component_ab34642e3b1dca0a75e40cc38ed5c88aa}{Update\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_component_abf94b17a1ac4a03bb0260cde1370979e}{Draw\+Base}} (uint64\+\_\+t delta\+Time)
+\item 
+void \mbox{\hyperlink{class_component_a4cfb704d496cd914635a84c5c026bf40}{Uninit\+Base}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a0bb954fe977d71269e2db01bc8a77e95}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a1eaa03e0fdda87936e2c29ce620f6f60}{Update}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_a2e546abb3e316740939bb57c03369e37}{Draw}} (uint64\+\_\+t delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{class_component_aa823c6a4ce46d3ae5242910325e397a6}{Uninit}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_component}{Component} class. 
+
+This class is the base class for all components. It is responsible for initializing, updating, drawing, and terminating the components. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_component_a2e546abb3e316740939bb57c03369e37}\label{class_component_a2e546abb3e316740939bb57c03369e37} 
+\index{Component@{Component}!Draw@{Draw}}
+\index{Draw@{Draw}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Draw (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Draw function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is drawn. 
+
+Implemented in \mbox{\hyperlink{class_skeletal_mesh_component_ac7639530a4080d029bcc71f80426aff0}{Skeletal\+Mesh\+Component}}.
+
+\Hypertarget{class_component_abf94b17a1ac4a03bb0260cde1370979e}\label{class_component_abf94b17a1ac4a03bb0260cde1370979e} 
+\index{Component@{Component}!DrawBase@{DrawBase}}
+\index{DrawBase@{DrawBase}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{DrawBase()}{DrawBase()}}
+{\footnotesize\ttfamily void Component\+::\+Draw\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Draw\+Base function~\newline
+ This function is called when we want to draw a child class. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_a0bb954fe977d71269e2db01bc8a77e95}\label{class_component_a0bb954fe977d71269e2db01bc8a77e95} 
+\index{Component@{Component}!Init@{Init}}
+\index{Init@{Init}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Init function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is initialized. 
+
+Implemented in \mbox{\hyperlink{class_skeletal_mesh_component_a9aa1e663684e9d1dd2a88d1bdb7674f9}{Skeletal\+Mesh\+Component}}.
+
+\Hypertarget{class_component_aed37c69469e2109d0a35235367dab687}\label{class_component_aed37c69469e2109d0a35235367dab687} 
+\index{Component@{Component}!InitBase@{InitBase}}
+\index{InitBase@{InitBase}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{InitBase()}{InitBase()}}
+{\footnotesize\ttfamily void Component\+::\+Init\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{class_component}{Component} constructor This function is called when we want to initialize a child class. \Hypertarget{class_component_aa823c6a4ce46d3ae5242910325e397a6}\label{class_component_aa823c6a4ce46d3ae5242910325e397a6} 
+\index{Component@{Component}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Uninit function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is terminated. 
+
+Implemented in \mbox{\hyperlink{class_skeletal_mesh_component_a526ecc03738cec9ee71a4729566081c7}{Skeletal\+Mesh\+Component}}.
+
+\Hypertarget{class_component_a4cfb704d496cd914635a84c5c026bf40}\label{class_component_a4cfb704d496cd914635a84c5c026bf40} 
+\index{Component@{Component}!UninitBase@{UninitBase}}
+\index{UninitBase@{UninitBase}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{UninitBase()}{UninitBase()}}
+{\footnotesize\ttfamily void Component\+::\+Uninit\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Uninit\+Base function~\newline
+ This function is called when we want to terminate a child class. \Hypertarget{class_component_a1eaa03e0fdda87936e2c29ce620f6f60}\label{class_component_a1eaa03e0fdda87936e2c29ce620f6f60} 
+\index{Component@{Component}!Update@{Update}}
+\index{Update@{Update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Update function~\newline
+ This function is a pure virtual function that calls its child classes when called. It is called when the component is updated. 
+
+Implemented in \mbox{\hyperlink{class_skeletal_mesh_component_a5df94ef88134a61ed0d36ae6bc73b326}{Skeletal\+Mesh\+Component}}.
+
+\Hypertarget{class_component_ab34642e3b1dca0a75e40cc38ed5c88aa}\label{class_component_ab34642e3b1dca0a75e40cc38ed5c88aa} 
+\index{Component@{Component}!UpdateBase@{UpdateBase}}
+\index{UpdateBase@{UpdateBase}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{UpdateBase()}{UpdateBase()}}
+{\footnotesize\ttfamily void Component\+::\+Update\+Base (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update\+Base function~\newline
+ This function is called when we want to update a child class. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \+: time passed since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_component_8h}{Component.\+h}}\end{DoxyCompactItemize}

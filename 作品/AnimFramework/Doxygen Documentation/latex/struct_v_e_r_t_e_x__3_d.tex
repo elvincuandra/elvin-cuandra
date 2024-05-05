@@ -1,0 +1,81 @@
+\doxysection{VERTEX\+\_\+3D Struct Reference}
+\hypertarget{struct_v_e_r_t_e_x__3_d}{}\label{struct_v_e_r_t_e_x__3_d}\index{VERTEX\_3D@{VERTEX\_3D}}
+
+
+This structure contains the per-\/vertex data of a 3D model.  
+
+
+
+
+{\ttfamily \#include $<$structs.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a5d6f4cf72c256e19fd1fcfae6a4475fb}{pos}}
+\item 
+Direct\+X\+::\+XMFLOAT3 \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a18234e4fd849f1bd2e8925658f77f730}{normal}}
+\item 
+Direct\+X\+::\+XMFLOAT4 \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_ae52edacb430b79006ac2e2a0cc8d7117}{diffuse}}
+\item 
+Direct\+X\+::\+XMFLOAT2 \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a849cc27970d4cf5cc78514914b442b6c}{uv}}
+\item 
+int \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a89b1e1ebffefcd5e413d30d4fe4633e9}{Bone\+Idx}} \mbox{[}4\mbox{]}
+\item 
+float \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_acda04b6721e1df1825aca204212c74e4}{Bone\+Weight}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_v_e_r_t_e_x__3_d_a03f37e3fb9a908acd533f0407a6e988f}{Bone\+Count}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This structure contains the per-\/vertex data of a 3D model. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_v_e_r_t_e_x__3_d_a03f37e3fb9a908acd533f0407a6e988f}\label{struct_v_e_r_t_e_x__3_d_a03f37e3fb9a908acd533f0407a6e988f} 
+\index{VERTEX\_3D@{VERTEX\_3D}!BoneCount@{BoneCount}}
+\index{BoneCount@{BoneCount}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{BoneCount}{BoneCount}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::\+Bone\+Count = 0}
+
+Member \textquotesingle{}Bone\+Count\textquotesingle{} contains the number of bones that affect the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_a89b1e1ebffefcd5e413d30d4fe4633e9}\label{struct_v_e_r_t_e_x__3_d_a89b1e1ebffefcd5e413d30d4fe4633e9} 
+\index{VERTEX\_3D@{VERTEX\_3D}!BoneIdx@{BoneIdx}}
+\index{BoneIdx@{BoneIdx}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{BoneIdx}{BoneIdx}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::\+Bone\+Idx}
+
+Member \textquotesingle{}Bone\+Idx\textquotesingle{} contains the index of the bones that affect the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_acda04b6721e1df1825aca204212c74e4}\label{struct_v_e_r_t_e_x__3_d_acda04b6721e1df1825aca204212c74e4} 
+\index{VERTEX\_3D@{VERTEX\_3D}!BoneWeight@{BoneWeight}}
+\index{BoneWeight@{BoneWeight}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{BoneWeight}{BoneWeight}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::\+Bone\+Weight}
+
+Member \textquotesingle{}Bone\+Weight\textquotesingle{} contains the weight of the bones that affect the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_ae52edacb430b79006ac2e2a0cc8d7117}\label{struct_v_e_r_t_e_x__3_d_ae52edacb430b79006ac2e2a0cc8d7117} 
+\index{VERTEX\_3D@{VERTEX\_3D}!diffuse@{diffuse}}
+\index{diffuse@{diffuse}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{diffuse}{diffuse}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::diffuse}
+
+Member \textquotesingle{}diffuse\textquotesingle{} contains the diffuse color of the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_a18234e4fd849f1bd2e8925658f77f730}\label{struct_v_e_r_t_e_x__3_d_a18234e4fd849f1bd2e8925658f77f730} 
+\index{VERTEX\_3D@{VERTEX\_3D}!normal@{normal}}
+\index{normal@{normal}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::normal}
+
+Member \textquotesingle{}normal\textquotesingle{} contains the normal of the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_a5d6f4cf72c256e19fd1fcfae6a4475fb}\label{struct_v_e_r_t_e_x__3_d_a5d6f4cf72c256e19fd1fcfae6a4475fb} 
+\index{VERTEX\_3D@{VERTEX\_3D}!pos@{pos}}
+\index{pos@{pos}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::pos}
+
+Member \textquotesingle{}pos\textquotesingle{} contains the position of the vertex. \Hypertarget{struct_v_e_r_t_e_x__3_d_a849cc27970d4cf5cc78514914b442b6c}\label{struct_v_e_r_t_e_x__3_d_a849cc27970d4cf5cc78514914b442b6c} 
+\index{VERTEX\_3D@{VERTEX\_3D}!uv@{uv}}
+\index{uv@{uv}!VERTEX\_3D@{VERTEX\_3D}}
+\doxysubsubsection{\texorpdfstring{uv}{uv}}
+{\footnotesize\ttfamily VERTEX\+\_\+3\+D\+::uv}
+
+Member \textquotesingle{}uv\textquotesingle{} contains the texture coordinates of the vertex. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{structs_8h}{structs.\+h}}\end{DoxyCompactItemize}

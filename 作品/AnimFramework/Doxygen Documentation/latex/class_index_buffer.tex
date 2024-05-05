@@ -1,0 +1,95 @@
+\doxysection{Index\+Buffer Class Reference}
+\hypertarget{class_index_buffer}{}\label{class_index_buffer}\index{IndexBuffer@{IndexBuffer}}
+
+
+\doxylink{class_index_buffer}{Index\+Buffer} class.  
+
+
+
+
+{\ttfamily \#include $<$Index\+Buffer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c}{Create}} (const std\+::vector$<$ unsigned int $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Create function~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9}{Set\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em Set\+GPU function~\newline
+ \end{DoxyCompactList}\item 
+ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_index_buffer_a712ac9c221722db5c8ca402c6b1d7858}{Get}} () const
+\begin{DoxyCompactList}\small\item\em Get function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Buffer $>$ \mbox{\hyperlink{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}{m\+\_\+p\+Index\+Buffer}}
+\begin{DoxyCompactList}\small\item\em This variable stores the index buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_index_buffer}{Index\+Buffer} class. 
+
+This class is responsible for creating and setting the index buffer. It uses the \doxylink{class_graphics}{Graphics} class to access the device and device context. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c}\label{class_index_buffer_ae1c175e71e9d683fc50f7ed49940619c} 
+\index{IndexBuffer@{IndexBuffer}!Create@{Create}}
+\index{Create@{Create}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily void Index\+Buffer\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned int $>$ \&}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create function~\newline
+ 
+
+This function creates the index buffer. 
+\begin{DoxyParams}{Parameters}
+{\em indices} & \+: vector of indices \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_index_buffer_a712ac9c221722db5c8ca402c6b1d7858}\label{class_index_buffer_a712ac9c221722db5c8ca402c6b1d7858} 
+\index{IndexBuffer@{IndexBuffer}!Get@{Get}}
+\index{Get@{Get}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*} Index\+Buffer\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get function~\newline
+ 
+
+This function returns the pointer to the index buffer. \begin{DoxyReturn}{Returns}
+pointer to the index buffer 
+\end{DoxyReturn}
+\Hypertarget{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9}\label{class_index_buffer_acb896224d5f0828f4d99bbf699771aa9} 
+\index{IndexBuffer@{IndexBuffer}!SetGPU@{SetGPU}}
+\index{SetGPU@{SetGPU}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{SetGPU()}{SetGPU()}}
+{\footnotesize\ttfamily void Index\+Buffer\+::\+Set\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set\+GPU function~\newline
+ 
+
+This function sets the index buffer to the GPU. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c}\label{class_index_buffer_a4837cf49c5bf95560e3ded853c7bfc2c} 
+\index{IndexBuffer@{IndexBuffer}!m\_pIndexBuffer@{m\_pIndexBuffer}}
+\index{m\_pIndexBuffer@{m\_pIndexBuffer}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{m\_pIndexBuffer}{m\_pIndexBuffer}}
+{\footnotesize\ttfamily Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ID3\+D11\+Buffer$>$ Index\+Buffer\+::m\+\_\+p\+Index\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This variable stores the index buffer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/\mbox{\hyperlink{_index_buffer_8h}{Index\+Buffer.\+h}}\end{DoxyCompactItemize}

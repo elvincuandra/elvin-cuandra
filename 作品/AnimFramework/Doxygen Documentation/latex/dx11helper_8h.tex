@@ -1,0 +1,45 @@
+\doxysection{C\+:/\+Users/\+Elvin/\+Desktop/\+Projects/\+Direct\+X/personal\+Project/personal\+Project/\+Anim\+Demo/\+Anim\+Demo/dx11helper.h File Reference}
+\hypertarget{dx11helper_8h}{}\label{dx11helper_8h}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/dx11helper.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/dx11helper.h}}
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$d3d11.\+h$>$}\newline
+{\ttfamily \#include $<$d3dcompiler.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_direct_x_helper}{Direct\+XHelper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_a87ab619f5d0e913001060a118f75e08c}{Direct\+XHelper\+::\+Create\+Constant\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int byte\+Size, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}constant\+Buffer)
+\begin{DoxyCompactList}\small\item\em Create\+Constant\+Buffer function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_ade7f0819d739d0f51a8b02ae4ccc249f}{Direct\+XHelper\+::\+Create\+Constant\+Buffer\+Write}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int byte\+Size, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}constant\+Buffer)
+\begin{DoxyCompactList}\small\item\em Create\+Constant\+Buffer\+Write function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_a554848ca54cf2b679a8fdc1cca9e7c75}{Direct\+XHelper\+::\+Create\+Vertex\+Buffer\+Write}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int stride, unsigned int vertex\+Num, void \texorpdfstring{$\ast$}{*}vertex\+Data, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}vertex\+Buffer)
+\begin{DoxyCompactList}\small\item\em Create\+Vertex\+Buffer function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_a087fe70b6d4bf64d2f2eaad5e2843c8d}{Direct\+XHelper\+::\+Create\+Index\+Buffer}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, unsigned int index\+Num, void \texorpdfstring{$\ast$}{*}index\+Data, ID3\+D11\+Buffer \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}index\+Buffer)
+\begin{DoxyCompactList}\small\item\em Create\+Index\+Buffer function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_a7219dbf4fb25901dea1b80e7e8ded756}{Direct\+XHelper\+::\+Create\+Vertex\+Shader}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, const char \texorpdfstring{$\ast$}{*}file\+Name, LPCSTR entry\+Point, LPCSTR shader\+Model, D3\+D11\+\_\+\+INPUT\+\_\+\+ELEMENT\+\_\+\+DESC \texorpdfstring{$\ast$}{*}layout, unsigned int num\+Elements, ID3\+D11\+Vertex\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Vertex\+Shader, ID3\+D11\+Input\+Layout \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Vertex\+Layout)
+\begin{DoxyCompactList}\small\item\em Create\+Vertex\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_a190399fbf62cf0573237153751eb948c}{Direct\+XHelper\+::\+Create\+Pixel\+Shader}} (ID3\+D11\+Device \texorpdfstring{$\ast$}{*}device, const char \texorpdfstring{$\ast$}{*}file\+Name, LPCSTR entry\+Point, LPCSTR shader\+Model, ID3\+D11\+Pixel\+Shader \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pixel\+Shader)
+\begin{DoxyCompactList}\small\item\em Create\+Pixel\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_afcdc207d32a1235f5be3580505e95bbf}{Direct\+XHelper\+::\+Compile\+Shader}} (const char \texorpdfstring{$\ast$}{*}file\+Name, LPCSTR entry\+Point, LPCSTR shader\+Model, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}shader\+Obj, size\+\_\+t \&Shader\+Obj\+Size, ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Blob)
+\begin{DoxyCompactList}\small\item\em Compile\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_ac7a1c4e8fcc18a379c9752faba886e50}{Direct\+XHelper\+::\+Compile\+Shader\+From\+File}} (const char \texorpdfstring{$\ast$}{*}file\+Name, LPCSTR entry\+Point, LPCSTR shader\+Model, ID3\+DBlob \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Blob)
+\begin{DoxyCompactList}\small\item\em Compile\+Shader\+From\+File function~\newline
+ \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{namespace_direct_x_helper_adb0cba6df2a7ad71ec976cdb779e00dd}{Direct\+XHelper\+::\+Read\+Shader}} (const char \texorpdfstring{$\ast$}{*}cso\+Name, std\+::vector$<$ unsigned char $>$ \&byte\+Array)
+\begin{DoxyCompactList}\small\item\em Read\+Shader function~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespace_direct_x_helper_ae6a6d6af61b512b14d971b0374ed4afc}{Direct\+XHelper\+::\+Get\+File\+Ext\+Name}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Get\+File\+Ext\+Name function~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}

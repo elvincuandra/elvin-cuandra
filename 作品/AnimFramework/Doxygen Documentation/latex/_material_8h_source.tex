@@ -1,0 +1,128 @@
+\doxysection{Material.\+h}
+\hypertarget{_material_8h_source}{}\label{_material_8h_source}\index{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Material.h@{C:/Users/Elvin/Desktop/Projects/DirectX/personalProject/personalProject/AnimDemo/AnimDemo/Material.h}}
+\mbox{\hyperlink{_material_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATERIAL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATERIAL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{structs_8h}{structs.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graphics_8h}{Graphics.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dx11helper_8h}{dx11helper.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_b_material}{CBMaterial}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material}{CBufferMaterial}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material_aa21bdac3fa196b83c8fc8ec8f7f1cfd9}{Material}};}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_b_material_a9430c7365a12362799f3c19a4193025e}{Init}}(\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ mtl)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ HRESULT\ hr\ =\ E\_FAIL;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Device>\ pDevice\ =\ \mbox{\hyperlink{class_graphics_ae4eef661f760da55b747edb81bf1059c}{Graphics::GetDevice}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ hr\ =\ \mbox{\hyperlink{namespace_direct_x_helper_a87ab619f5d0e913001060a118f75e08c}{DirectXHelper::CreateConstantBuffer}}(pDevice.Get(),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material}{CBufferMaterial}}),\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FAILED(hr))\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ create\ constant\ buffer\ for\ material"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Store\ mtl\ to\ member\ variable\ m\_Material}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}\ =\ mtl;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a0d432c4db212effe3f89182bb2918140}{Update}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a0d432c4db212effe3f89182bb2918140}{Update}}()\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material}{CBufferMaterial}}\ cb;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ cb.\mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material_aa21bdac3fa196b83c8fc8ec8f7f1cfd9}{Material}}\ =\ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DeviceContext>\ pContext\ =\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Graphics::GetDeviceContext}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ pContext-\/>UpdateSubresource(}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.Get(),}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \&cb,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ 0);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ pContext-\/>VSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ pContext-\/>PSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00062\ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a6021bf070c036a405df4b2cea572c43f}{SetGPU}}()\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DeviceContext>\ pContext\ =\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Graphics::GetDeviceContext}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ pContext-\/>VSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ pContext-\/>PSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a3237a01b6df0e08a301c032f9b061299}{SetMaterial}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\&\ mtl)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material}{CBufferMaterial}}\ cbm;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ cbm.\mbox{\hyperlink{struct_c_b_material_1_1_c_buffer_material_aa21bdac3fa196b83c8fc8ec8f7f1cfd9}{Material}}\ =\ mtl;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DeviceContext>\ pContext\ =\ \mbox{\hyperlink{class_graphics_ab9b368a2541bc9bc700d70e6e6b821d7}{Graphics::GetDeviceContext}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ pContext-\/>UpdateSubresource(}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.Get(),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \&cbm,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ 0);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ pContext-\/>VSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ pContext-\/>PSSetConstantBuffers(3,\ 1,\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.GetAddressOf());}
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a613bacfb61a0c40f78304925dd829675}{Uninit}}()\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}})\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}}.Reset();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_ad1ddab63ca06d3e9c99205c5a4fa9bed}{SetDiffuse}}(DirectX::XMFLOAT4\ diffuse)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a8511197ea689aac934c1b184c1f463a3}{Diffuse}}\ =\ diffuse;}
+\DoxyCodeLine{00108\ \ \ \ \ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_ab75322c9c3892e7987f2b51be7cfd843}{SetAmbient}}(DirectX::XMFLOAT4\ ambient)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_aef20e2784ae59b8c1d6aa5ceb388ed8e}{Ambient}}\ =\ ambient;}
+\DoxyCodeLine{00114\ \ \ \ \ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_ab660005e18e48320e27e2946d6b73377}{SetSpecular}}(DirectX::XMFLOAT4\ specular)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_aed331ffe160a8dbbcaeead6cb837f583}{Specular}}\ =\ specular;}
+\DoxyCodeLine{00120\ \ \ \ \ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a2de2d46a155da398011bcd9f8969af5d}{SetEmission}}(DirectX::XMFLOAT4\ emission)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a92b2b1f98b0baeca39a7a7a3cd921a38}{Emission}}\ =\ emission;}
+\DoxyCodeLine{00126\ \ \ \ \ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_b_material_a7100319adaddd358f0bd4c4eb0fec342}{SetShininess}}(\textcolor{keywordtype}{float}\ shininess)\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}}.\mbox{\hyperlink{struct_m_a_t_e_r_i_a_l_a89ab3aa034a4fd5df8d23875fc63b963}{Shininess}}\ =\ shininess;}
+\DoxyCodeLine{00132\ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}};\ }
+\DoxyCodeLine{00135\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}};\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_e_r_i_a_l}{MATERIAL}}\ \mbox{\hyperlink{class_c_b_material_aca1d1e674d477fa04aa7f1cc851df723}{GetMaterial}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_b_material_a999181f8c2b5661a8d9148caf006bef8}{m\_Material}};\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00148\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Buffer>\ \mbox{\hyperlink{class_c_b_material_a11912bf4b02741b856af055de15fe664}{GetConstantBuffer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_b_material_a596c455c9e1162b1397d031961308460}{m\_pConstantBufferMaterial}};\ \}}
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MATERIAL\_H}}
+
+\end{DoxyCode}
